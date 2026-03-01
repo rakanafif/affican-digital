@@ -64,7 +64,7 @@ h1{margin:14px 0 10px;font-size:clamp(30px,4vw,52px);line-height:1.08}
   /* Fix: ensure video shows behind overlay & content */
 .hero{
   position: relative;
-  min-height: 92vh;
+  min-height: 60vh;
   overflow: hidden;
 }
 
