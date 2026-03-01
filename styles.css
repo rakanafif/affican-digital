@@ -174,7 +174,14 @@ textarea{min-height:130px;resize:vertical}
   .about,.contactGrid{grid-template-columns:1fr}
   .hero{min-height: 92vh}
 }
-@media (max-width:760px){
+@media (max-width:760px){.hero{
+  min-height:50vh;
+}
+
+.hero__video{
+  position: relative;
+  height: 50vh;
+}
   .nav{display:none}
   .navbtn{display:inline-flex}
   .grid3{grid-template-columns:1fr}
