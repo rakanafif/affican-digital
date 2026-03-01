@@ -180,4 +180,31 @@ textarea{min-height:130px;resize:vertical}
   .grid3{grid-template-columns:1fr}
   .row{grid-template-columns:1fr}
   .hero__badges{grid-template-columns:1fr}
+
+/* منع التمرير الأفقي */
+html, body {
+  overflow-x: hidden;
+}
+
+/* جعل الفيديو متجاوب */
+.hero__video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* تحسين عرض الأقسام على الهاتف */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  .services,
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
 }
