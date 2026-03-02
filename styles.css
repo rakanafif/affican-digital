@@ -483,3 +483,35 @@ a, button{
     transform: translateY(-6px);
   }
 }
+/* ===== Scroll Reveal Animation ===== */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
+  will-change: transform, opacity, filter;
+}
+
+.reveal.in{
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* حركة خفيفة مختلفة للبطاقات */
+.reveal.card{
+  transform: translateY(22px) scale(.98);
+}
+.reveal.card.in{
+  transform: translateY(0) scale(1);
+}
+
+/* احترام تقليل الحركة (Accessibility) */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
