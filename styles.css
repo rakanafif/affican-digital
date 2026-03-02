@@ -558,12 +558,16 @@ a, button{
   .nav{ display:none !important; }
 
   .navbtn{
-    display:block !important;
-    font-size:26px;
-    background:none;
-    border:none;
-    color:#fff;
-    cursor:pointer;
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  font-size:28px;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
   }
 
   .navbtn::before{ content:"≡"; }
