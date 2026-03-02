@@ -175,7 +175,7 @@ textarea{min-height:130px;resize:vertical}
   .about,.contactGrid{grid-template-columns:1fr}
   .hero{min-height: 92vh}
 }
-@media (max-width:760px){
+@media (max-width:768px){
   .hero{ min-height:50vh; }
 
   h1{
