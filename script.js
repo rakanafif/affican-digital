@@ -39,3 +39,11 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const navBtn = document.getElementById("navBtn");
+  const mobileNav = document.getElementById("mobileNav");
+
+  navBtn.addEventListener("click", () => {
+    mobileNav.classList.toggle("open");
+  });
+});
