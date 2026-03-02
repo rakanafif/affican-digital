@@ -309,3 +309,12 @@ img{max-width:100%;height:auto;display:block;}
     padding:18px;
   }
 }
+.btn--primary{
+  box-shadow: 0 15px 35px rgba(255,140,0,.25);
+  transition: all .3s ease;
+}
+
+.btn--primary:active{
+  transform: scale(.96);
+  box-shadow: 0 8px 20px rgba(255,140,0,.35);
+}
