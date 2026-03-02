@@ -13,29 +13,33 @@
 <body>
   <!-- Header -->
   <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#home" aria-label="Affican Digital Solutions">
-        <!-- شعارك الحالي بدون تغيير اسمه -->
-        <img class="brand__logo" src="logo.png" alt="Affican Digital Solutions" />
-      </a>
+  <header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="#home" aria-label="Affican Digital">
+      <img class="brand__logo" src="logo.png" alt="Affican Digital" />
+    </a>
 
-      <nav class="nav" aria-label="القائمة">
-    <a href="#services">الخدمات</a>
-    <a href="chat.html">Communauté</a>
-    <a href="#work">الأعمال</a>
-    <a href="#about">من نحن</a>
-    <a class="nav__cta" href="#contact">تواصل</a>
-</nav>
+    <!-- القائمة الرئيسية (Desktop) -->
+    <nav class="nav" aria-label="القائمة">
+      <a href="#services">الخدمات</a>
+      <a href="chat.html">المجتمع</a>
+      <a href="#work">الأعمال</a>
+      <a href="#about">من نحن</a>
+      <a class="nav__cta" href="#contact">تواصل</a>
+    </nav>
 
-<button class="iconbtn navbtn" id="navBtn"></button>
+    <!-- زر فتح قائمة الهاتف -->
+    <button class="iconbtn navbtn" id="navBtn" aria-label="فتح القائمة"></button>
 
-<div class="mobileNav" id="mobileNav" aria-hidden="true">
-    <a href="#services">الخدمات</a>
-    <a href="chat.html">المجتمع</a>
-    <a href="#work">الأعمال</a>
-    <a href="#about">من نحن</a>
-    <a href="#contact">تواصل</a>
-</div>
+    <!-- قائمة الهاتف (Mobile) -->
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="#services">الخدمات</a>
+      <a href="chat.html">المجتمع</a>
+      <a href="#work">الأعمال</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل</a>
+    </div>
+  </div>
   </header>
 
   <main id="home" class="hero">
