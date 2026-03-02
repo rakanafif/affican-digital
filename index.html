@@ -247,11 +247,10 @@
     </div>
   </footer>
  
-<script>
-(function () {
+  <script>
   const targets = document.querySelectorAll(".box");
 
-  // 1) اعطِ العناصر كلاس reveal
+  // 1) اعط العناصر كلاس reveal
   targets.forEach((el) => el.classList.add("reveal"));
 
   // 2) Observer مع options صحيحة
@@ -267,10 +266,10 @@
     { threshold: 0.2 }
   );
 
-  // 3) راقب العناصر نفسها (targets) وليس ".reveal"
+  // 3) راقب العناصر نفسها (targets)
   targets.forEach((el) => io.observe(el));
-})();
 </script>
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
