@@ -405,3 +405,34 @@ img{max-width:100%;height:auto;display:block;}
   }
 
 }
+/* ===== المرحلة 2: تفاعل الأزرار والبطاقات ===== */
+
+/* الأزرار */
+.btn{
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active{
+  transform: scale(.98);
+  filter: brightness(1.05);
+}
+
+/* أزرار السوشيال */
+.socialBtn{
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.socialBtn:active{
+  transform: scale(.98);
+}
+
+/* البطاقات (badges / cards) */
+.badge, .card, .serviceCard{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.badge:active, .card:active, .serviceCard:active{
+  transform: translateY(2px);
+}
