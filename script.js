@@ -30,7 +30,7 @@ if (contactForm) {
 
     const msg = [
       `مرحبًا، أنا ${data.name || "عميل"}`,
-      `رقمي: ${data.phone || ""}`,
+      `رقمي: ${data.phone || ""}`,،
       `رسالة: ${data.message || ""}`,
       "— Affican Digital Solutions"
     ].join("\n");
