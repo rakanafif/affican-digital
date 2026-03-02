@@ -450,3 +450,16 @@ a, button{
 .badge:active{
   transform: scale(.97);
 }
+.card{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:active{
+  transform: scale(.98);
+}
+
+@media (hover:hover){
+  .card:hover{
+    transform: translateY(-4px);
+  }
+}
