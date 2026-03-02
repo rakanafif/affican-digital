@@ -39,7 +39,7 @@ a{text-decoration:none;color:inherit}
 .navbtn{display:none}
 
 .mobileNav{
-  display:none; flex-direction:column; gap:6px;
+  display:none; flex-direction: column;
   padding:10px 18px 16px;
   border-top:1px solid var(--line);
 }
