@@ -36,7 +36,28 @@ a{text-decoration:none;color:inherit}
   color:var(--text);
   padding:9px 12px;border-radius:12px;cursor:pointer
 }
-.navbtn{display:none}
+.navbtn { 
+    display: none; 
+}
+
+@media (max-width: 768px) {
+    .nav { 
+        display: none; 
+    }
+
+    .navbtn {
+        display: block;
+        font-size: 26px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbtn::before {
+        content: "☰";
+    }
+}}
 
 .mobileNav{
   display:none; flex-direction: column;
