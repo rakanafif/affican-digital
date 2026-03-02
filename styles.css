@@ -330,3 +330,52 @@ img{max-width:100%;height:auto;display:block;}
     transform: translateY(0);
   }
 }
+@media (max-width: 768px){
+
+  .container{ padding:15px !important; }
+
+  .hero{
+    min-height:70vh !important;
+    padding:24px 0 !important;
+  }
+
+  h1{
+    font-size: clamp(22px, 6vw, 34px) !important;
+  }
+
+  .lead{
+    font-size:15px !important;
+    line-height:1.8 !important;
+  }
+
+  .hero__cta{
+    flex-direction: column !important;
+    gap:12px !important;
+  }
+
+  .btn{
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  .socialRow{
+    justify-content:center !important;
+    flex-wrap: wrap !important;
+    gap:10px !important;
+  }
+
+  .socialBtn{
+    flex:1 !important;
+    text-align:center !important;
+  }
+
+  .hero__badges{
+    grid-template-columns: 1fr !important;
+    gap:14px !important;
+    margin-top:22px !important;
+  }
+
+  .nav{display:none !important;}
+  .navbtn{display:inline-flex !important;}
+
+}
