@@ -463,3 +463,23 @@ a, button{
     transform: translateY(-4px);
   }
 }
+/* ===== تأثير احترافي للبطاقات ===== */
+
+.badge,
+.box{
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* تأثير عند الضغط على الهاتف */
+.badge:active,
+.box:active{
+  transform: scale(.97);
+}
+
+/* تأثير hover للكمبيوتر فقط */
+@media (hover:hover){
+  .badge:hover,
+  .box:hover{
+    transform: translateY(-6px);
+  }
+}
