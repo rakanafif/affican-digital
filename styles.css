@@ -394,3 +394,14 @@ img{max-width:100%;height:auto;display:block;}
   .hero__badges{ gap: 10px; margin-top: 16px; }
   .badge{ padding: 14px; }
 }
+@media (max-width:768px){
+
+  .section{
+    padding: 48px 0;
+  }
+
+  .section h2{
+    margin-bottom: 10px;
+  }
+
+}
