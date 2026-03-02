@@ -175,15 +175,7 @@ textarea{min-height:130px;resize:vertical}
   .about,.contactGrid{grid-template-columns:1fr}
   .hero{min-height: 92vh}
 }
-@media (max-width:768px){
-  .hero{ min-height:50vh; }
 
-  h1{
-    font-size:32px;
-    font-weight:900;
-    letter-spacing:.5px;
-  }
-}
 .hero__video{
   position: relative;
   height: 50vh;
@@ -216,7 +208,24 @@ html, body {
   .services,
   .works {
     display: flex;
-    flex-direction: column;
+    flex-dire@media (max-width:768px){
+
+  .hero{ min-height:50vh; }
+
+  h1{
+    font-size:28px;
+  }
+
+  .grid3{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .section{
+    padding:44px 0;
+  }
+
+    }ction: column;
     gap: 15px;
   }
 
