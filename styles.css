@@ -216,3 +216,29 @@ html, body {
   }
 
 }
+/* ===== Mobile Fixes ===== */
+img{max-width:100%;height:auto;display:block;}
+.container{max-width:1120px;margin:0 auto;padding:0 16px;}
+
+/* خلي الهيرو مناسب للجوال */
+.hero{min-height:60vh;}
+.hero__content{width:100%; text-align:center;}
+.hero__cta{justify-content:center;}
+
+/* ترتيب الأقسام في الجوال */
+@media (max-width: 768px){
+  body{overflow-x:hidden;}
+  h1{font-size: clamp(22px, 6vw, 34px);}
+
+  .nav{display:none;}
+  .navbtn{display:inline-flex;} /* زر القائمة */
+  .mobileNav{padding:10px 12px;}
+
+  .grid3{grid-template-columns:1fr;}        /* الخدمات/الكروت */
+  .about{grid-template-columns:1fr;}        /* قسم من نحن */
+  .contactGrid{grid-template-columns:1fr;}  /* الفورم + المعلومات */
+
+  .hero{min-height:65vh;padding:24px 0;}
+  .hero__badges{grid-template-columns:1fr;gap:10px;}
+  .socialRow{flex-wrap:wrap;gap:10px;}
+}
