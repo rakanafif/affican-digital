@@ -244,5 +244,30 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+/* ===== Scroll Reveal ===== */
+(function () {
+  const targets = document.querySelectorAll(
+    ".section, .section__head, .box, .badge, .card, .contactGrid, .footer"
+  );
+
+  targets.forEach((el) => {
+    el.classList.add("reveal");
+  });
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+})();
+  </script>
 </body>
 </html>
