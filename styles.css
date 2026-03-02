@@ -172,8 +172,7 @@ textarea{min-height:130px;resize:vertical}
 .footer__logo{height:34px;width:auto;object-fit:contain;filter:drop-shadow(0 0 10px rgba(0,0,0,.75))}
 
 @media (max-width:920px){
-  .about,.contactGrid{grid-template-columns:1fr}
-  .hero{min-height: 92vh}
+  .hero{min-height:auto}
 }
 
 .hero__video{
