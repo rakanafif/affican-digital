@@ -443,3 +443,10 @@ a, button{
   .btn:hover{ transform: translateY(-1px); }
   .badge:hover, .card:hover, .serviceCard:hover{ transform: translateY(-2px); }
 }
+.badge{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.badge:active{
+  transform: scale(.97);
+}
