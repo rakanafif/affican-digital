@@ -245,28 +245,26 @@
  
 <script>
 (function () {
+  const targets = document.querySelectorAll(".box");
 
-  const targets = document.querySelectorAll(
-    ".box"
-  );
+  // 1) اعطِ العناصر كلاس reveal
+  targets.forEach((el) => el.classList.add("reveal"));
 
-  targets.forEach((el) => {
-    el.classList.add("reveal");
-  });
-
+  // 2) Observer مع options صحيحة
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in");
+          io.unobserve(entry.target); // اختياري: يمنع تكرار الحركة
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.6 }
   );
 
-  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-
+  // 3) راقب العناصر نفسها (targets) وليس ".reveal"
+  targets.forEach((el) => io.observe(el));
 })();
 </script>
 </body>
