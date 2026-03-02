@@ -43,7 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBtn = document.getElementById("navBtn");
   const mobileNav = document.getElementById("mobileNav");
 
+  if (!navBtn || !mobileNav) return;
+
+  // فتح/إغلاق القائمة
   navBtn.addEventListener("click", () => {
     mobileNav.classList.toggle("open");
+    mobileNav.setAttribute("aria-hidden", mobileNav.classList.contains("open") ? "false" : "true");
+  });
+
+  // إغلاق القائمة عند الضغط على أي رابط داخلها
+  mobileNav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      mobileNav.setAttribute("aria-hidden", "true");
+    });
   });
 });
