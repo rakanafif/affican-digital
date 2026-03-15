@@ -1,22 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // تحديث الهوية
-    document.getElementById('brand-slogan').textContent = SITE_CONFIG.brand.slogan;
+    // 1. تحديث السنة
+    const year = document.getElementById("year");
+    if (year) year.textContent = new Date().getFullYear();
 
-    const container = document.getElementById('books-container');
-    
-    SITE_CONFIG.books.forEach(book => {
-        const message = `مرحباً Affican Digital، أريد شراء كتاب "${book.title}" بسعر ${book.price}`;
-        const waLink = `https://wa.me/${SITE_CONFIG.brand.whatsapp}?text=${encodeURIComponent(message)}`;
+    // 2. القائمة للجوال
+    const navBtn = document.getElementById("navBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    if (navBtn) {
+        navBtn.addEventListener("click", () => mobileNav.classList.toggle("open"));
+    }
 
-        container.innerHTML += `
-            <div class="book-card">
-                <div class="book-img" style="background-image: url('${book.image}')"></div>
-                <h3>${book.title}</h3>
-                <div class="price-tag">${book.price}</div>
-                <a href="${waLink}" target="_blank" class="buy-whatsapp">
-                    شراء عبر واتساب
-                </a>
-            </div>
-        `;
-    });
+    // 3. فورمة الواتساب
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const fd = new FormData(contactForm);
+            const data = Object.fromEntries(fd.entries());
+            const msg = `مرحباً، أنا ${data.name}\nرقمي: ${data.phone}\nالرسالة: ${data.message}\n— Affican Digital`;
+            window.open(`https://wa.me/213542961475?text=${encodeURIComponent(msg)}`, '_blank');
+        });
+    }
+
+    // 4. حركة الظهور (Reveal)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('in');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });
