@@ -3,48 +3,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affican Digital | Global Solutions</title>
+    <title>Affican Digital | المتجر الرسمي</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="glass-nav">
-        <div class="container nav-flex">
-            <img src="logo.png" class="logo" id="site-logo">
-            <nav class="desktop-menu">
-                <a href="#services">الخدمات</a>
-                <a href="#books">الكتب</a>
-                <a href="#contact" class="btn-cta">تواصل الآن</a>
+    <header class="glass-header">
+        <div class="container nav-row">
+            <img src="logo.png" alt="Affican Digital" class="logo">
+            <nav>
+                <a href="#books-section">المتجر</a>
+                <a href="#contact" class="btn-sm">تواصل</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-global">
-        <div class="hero-bg-effects"></div>
-        <div class="container hero-inner">
-            <span class="badge-top" id="hero-slogan"></span>
-            <h1 id="hero-title"></h1>
-            <p class="lead" id="hero-desc"></p>
-            <div class="cta-group" id="hero-btns"></div>
-        </div>
-    </section>
+    <main>
+        <section class="hero-digital">
+            <div class="container">
+                <span class="badge-hero" id="brand-slogan"></span>
+                <h1 id="hero-title">Affican Digital Solutions</h1>
+                <p class="lead">صناعة الأثر الرقمي ورصد التحولات المادية باحترافية عالمية.</p>
+            </div>
+        </section>
 
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">خدماتنا الاحترافية</h2>
-            <div class="grid-dynamic" id="services-container"></div>
-        </div>
-    </section>
-
-    <section id="books" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">إصداراتنا</h2>
-            <div class="grid-dynamic" id="books-container"></div>
-        </div>
-    </section>
+        <section id="books-section" class="section">
+            <div class="container">
+                <h2 class="section-title">إصدارات راكان عفيف</h2>
+                <div class="books-grid" id="books-container">
+                    </div>
+            </div>
+        </section>
+    </main>
 
     <script src="config.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
-
