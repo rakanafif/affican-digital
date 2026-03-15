@@ -1,42 +1,195 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affican Digital | المتجر الرسمي</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Affican Digital Solutions — حلول رقمية وتسويق">
+<title>Affican Digital Solutions | متجر الكتب الرسمي</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="glass-header">
-        <div class="container nav-row">
-            <img src="logo.png" alt="Affican Digital" class="logo">
-            <nav>
-                <a href="#books-section">المتجر</a>
-                <a href="#contact" class="btn-sm">تواصل</a>
-            </nav>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home">
+        <img class="brand__logo" src="logo.png" alt="Affican Digital Solutions" />
+      </a>
+      <nav class="nav">
+        <a href="#services">الخدمات</a>
+        <a href="#work">الكتب</a>
+        <a href="#about">من نحن</a>
+        <a class="nav__cta" href="#contact">تواصل</a>
+      </nav>
+      <button class="iconbtn navbtn" id="navBtn">☰</button>
+    </div>
+    <div class="mobileNav" id="mobileNav">
+      <a href="#services">الخدمات</a>
+      <a href="#work">الكتب</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل</a>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="pill">وكالة رقمية • تسويق • إعلانات • محتوى</p>
+      <h1>Affican Digital Solutions</h1>
+      <p class="lead">شركة طموحة تقدم حلولاً مبتكرة بجودة عالية، وتحقق قيمة حقيقية ومستدامة لعملائها.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact">اطلب استشارة مجانية</a>
+        <a class="btn btn--ghost" href="#work">استعرض الكتب</a>
+      </div>
+      <div class="socialRow">
+        <a class="socialBtn" href="https://www.tiktok.com/@afif.1?_r=1&_t=ZN-94JelRzLR4g" target="_blank">TikTok</a>
+        <a class="socialBtn" href="https://www.instagram.com/rakan_afif1?igsh=MWVrNWw0czV5OTc3MA==" target="_blank">Instagram</a>
+        <a class="socialBtn" href="https://www.facebook.com/share/1PKjCv1zk8/" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>الخدمات</h2>
+        <p class="muted">حلول عملية تزيد الظهور وتحوّل الاهتمام إلى عملاء.</p>
+      </div>
+      <div class="grid3">
+        <article class="box reveal">
+          <h3>تسويق عبر منصات التواصل</h3>
+          <p class="muted">إدارة محتوى ونشر وتفاعل على جميع المنصات العالمية.</p>
+        </article>
+        <article class="box reveal">
+          <h3>إعلانات ممولة</h3>
+          <p class="muted">حملات تستهدف العميل المناسب بأفضل تكلفة واحترافية.</p>
+        </article>
+        <article class="box reveal">
+          <h3>صناعة محتوى</h3>
+          <p class="muted">أفكار وسكربتات للفيديوهات القصيرة وتصميمات بصرية.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>إصدارات راكان عفيف</h2>
+        <p class="muted">جميع الكتب متوفرة الآن بنسخة رقمية بسعر 4.99$ فقط.</p>
+      </div>
+      <div class="grid3">
+        <div class="workCard reveal">
+          <div class="workCard__thumb" style="background-image: url('file_000000002e1c722fb02ba7bb69660521.png'); background-size: cover;"></div>
+          <div class="workCard__body">
+            <h3>عقلية المليونير</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <span style="font-weight: 900; color: var(--primary);">4.99$</span>
+              <a class="btn btn--primary" style="padding: 8px 15px; font-size: 13px;" href="https://wa.me/213542961475?text=أريد شراء كتاب عقلية المليونير">شراء عبر واتساب</a>
+            </div>
+          </div>
         </div>
-    </header>
-
-    <main>
-        <section class="hero-digital">
-            <div class="container">
-                <span class="badge-hero" id="brand-slogan"></span>
-                <h1 id="hero-title">Affican Digital Solutions</h1>
-                <p class="lead">صناعة الأثر الرقمي ورصد التحولات المادية باحترافية عالمية.</p>
+        <div class="workCard reveal">
+          <div class="workCard__thumb" style="background-image: url('Polish_20260315_020450573.png'); background-size: cover;"></div>
+          <div class="workCard__body">
+            <h3>المثالية: المرض النبيل</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <span style="font-weight: 900; color: var(--primary);">4.99$</span>
+              <a class="btn btn--primary" style="padding: 8px 15px; font-size: 13px;" href="https://wa.me/213542961475?text=أريد شراء كتاب المثالية">شراء عبر واتساب</a>
             </div>
-        </section>
-
-        <section id="books-section" class="section">
-            <div class="container">
-                <h2 class="section-title">إصدارات راكان عفيف</h2>
-                <div class="books-grid" id="books-container">
-                    </div>
+          </div>
+        </div>
+        <div class="workCard reveal">
+          <div class="workCard__thumb" style="background-image: url('Polish_20260313_052139900.png'); background-size: cover;"></div>
+          <div class="workCard__body">
+            <h3>حكمة العقل وشغف القلب</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <span style="font-weight: 900; color: var(--primary);">4.99$</span>
+              <a class="btn btn--primary" style="padding: 8px 15px; font-size: 13px;" href="https://wa.me/213542961475?text=أريد شراء كتاب حكمة العقل">شراء عبر واتساب</a>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+        <div class="workCard reveal">
+          <div class="workCard__thumb" style="background-image: url('Polish_20260314_212415080.png'); background-size: cover;"></div>
+          <div class="workCard__body">
+            <h3>الهاوية</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <span style="font-weight: 900; color: var(--primary);">4.99$</span>
+              <a class="btn btn--primary" style="padding: 8px 15px; font-size: 13px;" href="https://wa.me/213542961475?text=أريد شراء كتاب الهاوية">شراء عبر واتساب</a>
+            </div>
+          </div>
+        </div>
+        <div class="workCard reveal">
+          <div class="workCard__thumb" style="background-image: url('Polish_20260313_020323916.png'); background-size: cover;"></div>
+          <div class="workCard__body">
+            <h3>مرآة العدو</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <span style="font-weight: 900; color: var(--primary);">4.99$</span>
+              <a class="btn btn--primary" style="padding: 8px 15px; font-size: 13px;" href="https://wa.me/213542961475?text=أريد شراء كتاب مرآة العدو">شراء عبر واتساب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="config.js"></script>
-    <script src="main.js"></script>
+  <section id="about" class="section">
+    <div class="container about">
+      <div>
+        <div class="section__head">
+          <h2>من نحن</h2>
+          <p class="muted">نحن نؤمن أن التسويق نظام: رسالة واضحة + محتوى مقنع + إعلان ذكي.</p>
+        </div>
+        <div class="ticks">
+          <div class="tick">✅ احتراف وشفافية</div>
+          <div class="tick">✅ نتائج قابلة للقياس</div>
+          <div class="tick">✅ شراكات طويلة المدى</div>
+        </div>
+      </div>
+      <div class="card pad">
+        <h3>كيف نشتغل؟</h3>
+        <ol class="ol">
+          <li>نفهم نشاطك وعميلك</li>
+          <li>نبني عرض قوي + خطة محتوى</li>
+          <li>نطلق الحملات ونراقب الأرقام</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>تواصل معنا</h2>
+        <p class="muted">اكتب طلبك وسيفتح واتساب برسالة جاهزة.</p>
+      </div>
+      <div class="contactGrid">
+        <form class="card form" id="contactForm">
+          <div class="row">
+            <label>الاسم <input name="name" required placeholder="اسمك" /></label>
+            <label>الهاتف / واتساب <input name="phone" required placeholder="054..." /></label>
+          </div>
+          <label>رسالتك <textarea name="message" required placeholder="صف مشروعك باختصار…"></textarea></label>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">إرسال على واتساب</button>
+          </div>
+        </form>
+        <div class="card pad">
+          <h3>معلومات التواصل</h3>
+          <p class="muted">أم البواقي — الجزائر</p>
+          <p class="muted">واتساب: 0542961475</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footerBrand">
+        <img class="footer__logo" src="logo.png" alt="Affican Digital Solutions" />
+        <p>© <span id="year"></span> Affican Digital Solutions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
