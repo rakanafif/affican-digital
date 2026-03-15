@@ -3,96 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affican Digital Solutions | التسويق والكتب</title>
+  <title>Affican Digital Solutions | راكان عفيف</title>
   <style>
-    :root {
-      --bg: #070a10; --card: #0f172a; --text: #e5e7eb;
-      --primary: #ff8c00; --primary2: #00bfff; --line: rgba(255,255,255,.10);
-    }
+    :root { --bg: #070a10; --card: #0f172a; --text: #e5e7eb; --primary: #ff8c00; --primary2: #00bfff; --line: rgba(255,255,255,.10); }
     body { margin: 0; background: var(--bg); color: var(--text); font-family: sans-serif; text-align: right; }
     .container { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
-    header { padding: 15px 0; border-bottom: 1px solid var(--line); background: rgba(7,10,16,0.95); position: sticky; top:0; z-index: 100; }
-    .nav { display: flex; justify-content: space-between; align-items: center; }
+    header { padding: 15px 0; border-bottom: 1px solid var(--line); background: rgba(7,10,16,0.95); position: sticky; top:0; z-index: 100; backdrop-filter: blur(10px); }
     .hero { padding: 60px 0; text-align: center; background: radial-gradient(circle at center, rgba(255,140,0,0.1), transparent); }
-    .section { padding: 50px 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; padding: 20px; text-align: center; }
-    
-    /* تنسيق الصور لضمان الظهور */
-    .book-img-container { width: 100%; height: 380px; background: #000; border-radius: 12px; overflow: hidden; margin-bottom: 15px; border: 1px solid var(--line); }
-    .book-img-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    
-    .price { font-weight: 900; color: var(--primary); font-size: 1.2rem; }
+    .section { padding: 50px 0; border-bottom: 1px solid var(--line); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 25px; text-align: center; }
+    .book-thumb { width: 100%; height: 380px; background: #000; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+    .book-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .btn { padding: 10px 20px; border-radius: 10px; font-weight: bold; text-decoration: none; color: white; background: linear-gradient(135deg, var(--primary), var(--primary2)); display: inline-block; }
   </style>
 </head>
 <body>
+  <header><div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <h2 style="margin:0; color:var(--primary);">Affican Digital</h2>
+    <img src="logo.png" style="height:40px;" alt="Logo">
+  </div></header>
 
-  <header>
-    <div class="container nav">
-      <h2 style="margin:0; color:var(--primary);">Affican Digital</h2> <img src="logo.png" style="height:40px;" alt="Logo"> </div>
-  </header>
+  <section class="hero"><div class="container">
+    <h1>Affican Digital Solutions</h1>
+    <p style="color: #a3aab8;">وكالة تسويق رقمي وإصدارات المؤلف راكان عفيف</p>
+  </div></section>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Affican Digital Solutions</h1> <p style="color: #a3aab8;">حلول التسويق الرقمي وإصدارات راكان عفيف</p> </div>
-  </section>
-
-  <section class="container section">
-    <h2 style="text-align: center; color: var(--primary2);">خدمات الشركة</h2> <div class="grid" style="margin-top: 30px;">
-      <div class="card"><h3>إدارة المنصات</h3><p>إدارة احترافية شاملة.</p></div>
-      <div class="card"><h3>إعلانات ممولة</h3><p>حملات ذكية ومستهدفة.</p></div>
-      <div class="card"><h3>صناعة محتوى</h3><p>فيديوهات وتصاميم جذابة.</p></div>
+  <section id="services" class="container section">
+    <h2 style="text-align:center; color:var(--primary2);">خدماتنا</h2>
+    <div class="grid">
+      <div class="card"><h3>إدارة المنصات</h3><p>TikTok & Instagram</p></div>
+      <div class="card"><h3>إعلانات ممولة</h3><p>حملات ذكية ومستهدفة</p></div>
+      <div class="card"><h3>صناعة محتوى</h3><p>فيديوهات وتصاميم</p></div>
     </div>
   </section>
 
-  <section class="container section" style="background: rgba(255,255,255,0.02); border-radius: 20px;">
-    <h2 style="text-align: center; color: var(--primary);">متجر الكتب</h2> <div class="grid" style="margin-top: 30px;">
-      
+  <section id="books" class="container section">
+    <h2 style="text-align:center; color:var(--primary);">متجر الكتب (4.99$)</h2>
+    <div class="grid">
       <div class="card">
-        <div class="book-img-container"><img src="millionaire.png?v=2" alt="عقلية المليونير"></div> <h3>عقلية المليونير</h3>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="price">4.99$</span>
-          <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب عقلية المليونير">شراء</a> </div>
+        <div class="book-thumb"><img src="millionaire.png" alt="عقلية المليونير"></div>
+        <h3>عقلية المليونير</h3>
+        <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب عقلية المليونير">شراء عبر واتساب</a>
       </div>
-
       <div class="card">
-        <div class="book-img-container"><img src="idealism.png?v=2" alt="المثالية"></div> <h3>المثالية: المرض النبيل</h3>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="price">4.99$</span>
-          <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب المثالية">شراء</a>
-        </div>
+        <div class="book-thumb"><img src="abyss.png" alt="الهاوية"></div>
+        <h3>الهاوية</h3>
+        <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب الهاوية">شراء عبر واتساب</a>
       </div>
-
-      <div class="card">
-        <div class="book-img-container"><img src="wisdom.png?v=2" alt="حكمة العقل"></div> <h3>حكمة العقل وشغف القلب</h3> <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="price">4.99$</span>
-          <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب حكمة العقل">شراء</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="book-img-container"><img src="abyss.png?v=2" alt="الهاوية"></div> <h3>الهاوية</h3>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="price">4.99$</span>
-          <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب الهاوية">شراء</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="book-img-container"><img src="enemy_mirror.png?v=2" alt="مرآة العدو"></div> <h3>مرآة العدو</h3>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="price">4.99$</span>
-          <a class="btn" href="https://wa.me/213542961475?text=شراء كتاب مرآة العدو">شراء</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <footer style="text-align: center; padding: 40px 0;">
-    <p>© 2026 Affican Digital Solutions</p> </footer>
-
+  <footer style="text-align:center; padding:30px 0; color:#666;">© 2026 Affican Digital Solutions</footer>
 </body>
 </html>
-
