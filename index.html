@@ -5,36 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affican Digital | متجر راكان عفيف</title>
   <style>
-    /* التنسيق المدمج لضمان العمل 100% */
+    /* التنسيق الأساسي لضمان الظهور الفوري */
     :root {
       --bg: #070a10; --card: #0f172a; --text: #e5e7eb;
       --primary: #ff8c00; --primary2: #00bfff; --line: rgba(255,255,255,.10);
     }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: sans-serif; overflow-x: hidden; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: sans-serif; }
     .container { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
     
-    header { padding: 15px 0; border-bottom: 1px solid var(--line); text-align: center; }
-    .hero { padding: 60px 0; text-align: center; background: radial-gradient(circle, rgba(255,140,0,0.1), transparent); }
+    header { padding: 15px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; background: rgba(7,10,16,0.9); }
+    .brand__logo { height: 40px; }
+
+    .hero { padding: 40px 0; text-align: center; }
+    .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding-bottom: 50px; }
     
-    .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 0; }
     .workCard { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
     
-    /* عرض الصور بشكل مباشر */
-    .workCard__thumb { width: 100%; height: 380px; background: #000; overflow: hidden; }
-    .workCard__thumb img { width: 100%; height: 100%; object-fit: cover; }
+    /* عرض الصور */
+    .workCard__thumb { width: 100%; height: 400px; background: #111; position: relative; }
+    .workCard__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     
-    .workCard__body { padding: 20px; flex-grow: 1; }
+    .workCard__body { padding: 20px; text-align: right; }
     .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
     .price { font-weight: 900; color: var(--primary); font-size: 1.2rem; }
     
-    .btn { padding: 10px 20px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; color: white; background: linear-gradient(135deg, var(--primary), var(--primary2)); }
+    .btn { padding: 10px 20px; border-radius: 12px; font-weight: bold; text-decoration: none; color: white; background: linear-gradient(135deg, var(--primary), var(--primary2)); }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <h2 style="margin:0; color:var(--primary);">Affican Digital</h2> </div>
+    <div class="container" style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+      <h2 style="margin:0; color:var(--primary); font-size:1.2rem;">Affican Digital</h2> <img src="logo.png" class="brand__logo" alt="Logo"> </div>
   </header>
 
   <section class="hero">
@@ -46,14 +48,18 @@
     <div class="grid3">
       <div class="workCard">
         <div class="workCard__thumb"><img src="millionaire.png" alt="عقلية المليونير"></div> <div class="workCard__body">
-          <h3>عقلية المليونير</h3> <div class="card-footer">
-            <span class="price">4.99$</span> <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب عقلية المليونير">شراء</a> </div>
+          <h3>عقلية المليونير</h3>
+          <div class="card-footer">
+            <span class="price">4.99$</span>
+            <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب عقلية المليونير">شراء</a> </div>
         </div>
       </div>
 
       <div class="workCard">
-        <div class="workCard__thumb"><img src="idealism.png" alt="المثالية"></div> <div class="workCard__body">
-          <h3>المثالية: المرض النبيل</h3> <div class="card-footer">
+        <div class="workCard__thumb"><img src="idealism.png" alt="المثالية"></div>
+        <div class="workCard__body">
+          <h3>المثالية: المرض النبيل</h3>
+          <div class="card-footer">
             <span class="price">4.99$</span>
             <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب المثالية">شراء</a>
           </div>
@@ -61,8 +67,10 @@
       </div>
 
       <div class="workCard">
-        <div class="workCard__thumb"><img src="wisdom.png" alt="حكمة العقل"></div> <div class="workCard__body">
-          <h3>حكمة العقل وشغف القلب</h3> <div class="card-footer">
+        <div class="workCard__thumb"><img src="wisdom.png" alt="حكمة العقل"></div>
+        <div class="workCard__body">
+          <h3>حكمة العقل وشغف القلب</h3>
+          <div class="card-footer">
             <span class="price">4.99$</span>
             <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب حكمة العقل">شراء</a>
           </div>
@@ -70,8 +78,10 @@
       </div>
 
       <div class="workCard">
-        <div class="workCard__thumb"><img src="abyss.png" alt="الهاوية"></div> <div class="workCard__body">
-          <h3>الهاوية</h3> <div class="card-footer">
+        <div class="workCard__thumb"><img src="abyss.png" alt="الهاوية"></div>
+        <div class="workCard__body">
+          <h3>الهاوية</h3>
+          <div class="card-footer">
             <span class="price">4.99$</span>
             <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب الهاوية">شراء</a>
           </div>
@@ -79,8 +89,10 @@
       </div>
 
       <div class="workCard">
-        <div class="workCard__thumb"><img src="enemy_mirror.png" alt="مرآة العدو"></div> <div class="workCard__body">
-          <h3>مرآة العدو</h3> <div class="card-footer">
+        <div class="workCard__thumb"><img src="enemy_mirror.png" alt="مرآة العدو"></div>
+        <div class="workCard__body">
+          <h3>مرآة العدو</h3>
+          <div class="card-footer">
             <span class="price">4.99$</span>
             <a class="btn" href="https://wa.me/213542961475?text=أريد شراء كتاب مرآة العدو">شراء</a>
           </div>
@@ -89,7 +101,7 @@
     </div>
   </div>
 
-  <footer style="text-align: center; padding: 40px 0; border-top: 1px solid var(--line);">
+  <footer style="text-align: center; padding: 30px 0; border-top: 1px solid var(--line); color: #555; font-size: 0.8rem;">
     <p>© 2026 Affican Digital Solutions</p> </footer>
 
 </body>
