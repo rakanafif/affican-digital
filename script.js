@@ -1,49 +1,77 @@
-const SITE_DATA = {
+/**
+ * لوحة تحكم المحتوى - Affican Digital
+ * عدل البيانات هنا ليتحدث الموقع تلقائياً
+ */
+
+const CONFIG = {
     hero: {
+        badge: "مستقبل الحلول الرقمية",
         title: "Affican Digital Solutions",
-        description: "حيث تلتقي حكمة العقل بنبض الحقيقة. نحن لا نصمم منصات، نحن نبني هويات رقمية عابرة للزمن.",
+        desc: "نحن نبني الجسور بين القديم والحديث، ونحول الركود المادي إلى سيولة رقمية تخترق الفراغ وتحقق الأثر.",
+        btns: [
+            { text: "استعرض الكتب", link: "#books", type: "main" },
+            { text: "خدماتنا", link: "#services", type: "ghost" }
+        ]
     },
-    // لإضافة كتاب جديد، فقط انسخ الأسطر بين { } وأضفها للقائمة
+    
+    // أضف أو احذف كتبك هنا
     books: [
         {
             title: "نبض الحقيقة",
             author: "راكان عفيف",
-            price: "$29.99",
-            image: "book1.jpg",
-            link: "#"
+            price: "29.99$",
+            img: "book1.jpg", // ضع صورة الغلاف بهذا الاسم
+            link: "https://wa.me/213542961475"
         },
         {
             title: "حكمة العقل وشغف القلب",
             author: "راكان عفيف",
-            price: "$25.00",
-            image: "book2.jpg",
-            link: "#"
+            price: "25.00$",
+            img: "book2.jpg",
+            link: "https://wa.me/213542961475"
         }
     ],
+
     services: [
-        { title: "إدارة المحتوى السيال", desc: "نحول الركود المادي إلى سيولة رقمية تخترق الفراغ.", icon: "fa-layers" },
-        { title: "هندسة الأثر", desc: "تصميم حملات تترك أثراً لا يمحى في وعي الجمهور.", icon: "fa-bullseye" }
+        { title: "إدارة المحتوى", icon: "fa-layers", desc: "خطة محتوى شهرية متكاملة تضمن الانتشار." },
+        { title: "إعلانات ذكية", icon: "fa-bolt", desc: "حملات ممولة تستهدف العميل المناسب بدقة." },
+        { title: "هندسة الهوية", icon: "fa-fingerprint", desc: "بناء علامة تجارية تترك أثراً لا يمحى." }
     ]
 };
 
-// وظيفة البناء التلقائي للموقع
-function buildSite() {
-    // تحديث الهيرو
-    document.getElementById('hero-desc').innerText = SITE_DATA.hero.description;
+// وظيفة البناء التلقائي
+function renderSite() {
+    // 1. تحديث الهيرو
+    document.getElementById('hero-badge').innerText = CONFIG.hero.badge;
+    document.getElementById('hero-title').innerText = CONFIG.hero.title;
+    document.getElementById('hero-desc').innerText = CONFIG.hero.desc;
+    
+    // 2. بناء أزرار الهيرو
+    document.getElementById('hero-actions').innerHTML = CONFIG.hero.btns.map(btn => 
+        `<a href="${btn.link}" class="${btn.type === 'main' ? 'btn-premium' : 'btn-buy'}">${btn.text}</a>`
+    ).join('');
 
-    // بناء شبكة الكتب
-    const booksGrid = document.getElementById('books-grid');
-    booksGrid.innerHTML = SITE_DATA.books.map(book => `
+    // 3. بناء شبكة الكتب
+    document.getElementById('books-grid').innerHTML = CONFIG.books.map(book => `
         <div class="premium-card book-card">
-            <div class="card-img" style="background-image: url('${book.image}')"></div>
-            <div class="card-body">
+            <div class="book-img" style="background-image: url('${book.img}')"></div>
+            <div class="book-info">
+                <small style="color:var(--accent)">${book.author}</small>
                 <h3>${book.title}</h3>
-                <p class="author">${book.author}</p>
                 <div class="price">${book.price}</div>
-                <a href="${book.link}" class="btn-buy">شراء الكتاب</a>
+                <a href="${book.link}" class="btn-premium" style="display:block; text-align:center">اطلب الآن</a>
             </div>
+        </div>
+    `).join('');
+
+    // 4. بناء الخدمات
+    document.getElementById('services-grid').innerHTML = CONFIG.services.map(s => `
+        <div class="premium-card">
+            <i class="fa-solid ${s.icon}" style="font-size:2.5rem; color:var(--accent-blue); margin-bottom:20px"></i>
+            <h3>${s.title}</h3>
+            <p style="color:var(--text-muted); margin-top:10px">${s.desc}</p>
         </div>
     `).join('');
 }
 
-window.onload = buildSite;
+document.addEventListener('DOMContentLoaded', renderSite);
