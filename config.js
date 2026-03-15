@@ -1,47 +1,39 @@
 // لوحة تحكم المحتوى - Affican Digital Solutions
 const SITE_CONFIG = {
     brand: {
-        name: "Affican Digital",
-        logo: "logo.png",
-        slogan: "وكالة رقمية • تسويق • إعلانات • محتوى"
+        name: "Affican Digital", //
+        logo: "logo.png", //
+        whatsapp: "213542961475", //
+        slogan: "Precision • Observation • Affican" //
     },
-    hero: {
-        title: "Affican Digital Solutions",
-        description: "شركة طموحة تقدم حلولاً مبتكرة بجودة عالية، وتبني شراكات قائمة على الثقة والاحتراف لتحقيق قيمة حقيقية ومستدامة لعملائها.",
-        primaryBtn: { text: "اطلب استشارة مجانية", link: "#contact" },
-        secondaryBtn: { text: "استعرض الخدمات", link: "#services" }
-    },
-    services: [
-        {
-            title: "تسويق عبر منصات التواصل",
-            desc: "إدارة محتوى ونشر وتفاعل على TikTok / Instagram / YouTube / Facebook.",
-            features: ["خطة محتوى شهرية", "تقويم نشر + أفكار", "تحسين الهوية والنبرة"]
-        },
-        {
-            title: "إعلانات ممولة",
-            desc: "حملات تستهدف العميل المناسب بأفضل تكلفة.",
-            features: ["استهداف دقيق", "نسخ إعلانية متعددة", "تحسين مستمر"]
-        },
-        {
-            title: "صناعة محتوى",
-            desc: "أفكار + سكربت + توجيه للفيديوهات القصيرة وتصميمات.",
-            features: ["Hooks قوية", "قوالب جاهزة", "محتوى يقنع ويبيع"]
-        }
-    ],
-    // أضف كتبك هنا بسهولة
+    // قائمة الكتب الذكية
     books: [
         {
-            title: "نبض الحقيقة",
-            author: "راكان عفيف",
-            image: "book1.jpg",
-            price: "قريبًا",
-            link: "#"
+            title: "عقلية المليونير", //
+            image: "file_000000002e1c722fb02ba7bb69660521.png",
+            price: "4.99$",
+            tag: "الأكثر مبيعاً"
+        },
+        {
+            title: "المثالية: المرض النبيل", //
+            image: "Polish_20260315_020450573.png",
+            price: "4.99$",
+            tag: "جديد"
+        },
+        {
+            title: "حكمة العقل وشغف القلب", //
+            image: "Polish_20260313_052139900.png",
+            price: "4.99$"
+        },
+        {
+            title: "الهاوية", //
+            image: "Polish_20260314_212415080.png",
+            price: "4.99$"
+        },
+        {
+            title: "مرآة العدو", //
+            image: "Polish_20260313_020323916.png",
+            price: "4.99$"
         }
-    ],
-    contact: {
-        whatsapp: "213542961475",
-        location: "أم البواقي — الجزائر",
-        email: "contact@affican.com"
-    }
+    ]
 };
-
