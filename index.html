@@ -3,51 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affican Digital | Premium Experience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Affican Digital | Global Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <img src="logo.png" class="nav-logo" alt="Logo">
-            <div class="nav-links">
-                <a href="#books">المؤلفات</a>
+    <header class="glass-nav">
+        <div class="container nav-flex">
+            <img src="logo.png" class="logo" id="site-logo">
+            <nav class="desktop-menu">
                 <a href="#services">الخدمات</a>
-                <a href="#contact" class="nav-cta">ابدأ رحلتك</a>
-            </div>
+                <a href="#books">الكتب</a>
+                <a href="#contact" class="btn-cta">تواصل الآن</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero-split">
-        <div class="hero-text-side">
-            <div class="reveal-content">
-                <span class="eyebrow">Affican Digital Biz Solutions</span>
-                <h1 id="hero-title">نصمم المستقبل، لا مجرد منصات.</h1>
-                <p id="hero-desc" class="subheadline">حيث تلتقي حكمة العقل بنبض الحقيقة في فضاء رقمي لا يعرف الحدود.</p>
-                <div class="hero-actions">
-                    <a href="#books" class="btn-solid">اكتشف المتجر</a>
-                    <a href="#services" class="btn-outline">خدماتنا</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-image-side">
-            <div class="hero-image-overlay"></div>
+    <section class="hero-global">
+        <div class="hero-bg-effects"></div>
+        <div class="container hero-inner">
+            <span class="badge-top" id="hero-slogan"></span>
+            <h1 id="hero-title"></h1>
+            <p class="lead" id="hero-desc"></p>
+            <div class="cta-group" id="hero-btns"></div>
         </div>
     </section>
 
-    <section id="books" class="books-section">
+    <section id="services" class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>المكتبة الحصرية</h2>
-                <div class="title-line"></div>
-            </div>
-            <div id="books-grid" class="books-display">
-                </div>
+            <h2 class="section-title">خدماتنا الاحترافية</h2>
+            <div class="grid-dynamic" id="services-container"></div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="books" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">إصداراتنا</h2>
+            <div class="grid-dynamic" id="books-container"></div>
+        </div>
+    </section>
+
+    <script src="config.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
+
