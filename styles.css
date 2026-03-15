@@ -1,241 +1,65 @@
-
-/* Affican Digital - Premium Global Style 2026
-   Design Logic: Luxury, Simplicity, and Visual Power
-*/
-
 :root {
-  --bg: #050505; /* أسود عميق للفخامة */
+  --bg: #050505; 
   --card: #0d0d0d;
-  --accent: #ff8c00; /* البرتقالي المتوهج من شعارك */
-  --accent-blue: #00bfff; /* الأزرق الرقمي من شعارك */
+  --accent: #ff8c00; 
+  --accent-blue: #00bfff;
   --text-main: #ffffff;
   --text-muted: #a0a0a0;
   --line: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.03);
-  --radius-lg: 24px;
-  --radius-sm: 12px;
-  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --radius: 24px;
+  --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body {
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+  font-family: system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 25px;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-/* --- الهيدر الزجاجي (Glassmorphism) --- */
+/* Navbar */
 .glass-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(5, 5, 5, 0.8);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid var(--line);
-  padding: 15px 0;
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line); padding: 15px 0;
 }
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.logo { height: 45px; }
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { color: var(--text-muted); text-decoration: none; transition: var(--transition); font-weight: 500; }
+.nav-links a:hover { color: var(--accent); }
 
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
-  transition: var(--transition);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
+/* Buttons */
 .btn-premium {
   background: linear-gradient(135deg, var(--accent), var(--accent-blue));
-  color: white !important;
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 600 !important;
+  padding: 12px 28px; border-radius: 50px; color: white !important; font-weight: 600;
 }
 
-/* --- الهيرو (الواجهة الرئيسية) --- */
+/* Hero */
 .hero-premium {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.1), transparent),
-              radial-gradient(circle at bottom left, rgba(0, 191, 255, 0.1), transparent);
+  min-height: 90vh; display: flex; align-items: center; text-align: center;
+  background: radial-gradient(circle at center, rgba(255,140,0,0.05) 0%, transparent 70%);
 }
+h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; margin-bottom: 20px; letter-spacing: -2px; }
+.lead-text { font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px; }
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.badge-tag {
-  display: inline-block;
-  padding: 6px 16px;
-  background: var(--glass);
-  border: 1px solid var(--line);
-  border-radius: 50px;
-  color: var(--accent);
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 1.1;
-  margin-bottom: 25px;
-  background: linear-gradient(to right, #fff, #888);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.lead-text {
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  max-width: 700px;
-  margin: 0 auto 40px;
-}
-
-.btn-main {
-  padding: 18px 40px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  margin-left: 15px;
-  transition: var(--transition);
-}
-
-.btn-main:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(255,255,255,0.1);
-}
-
-/* --- شبكة الكتب والخدمات (Grid Layout) --- */
-.grid-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
+/* Grid & Cards */
+.grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
 .premium-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 40px; transition: var(--transition); position: relative; overflow: hidden;
 }
+.premium-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 
-.premium-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-10px);
-}
+/* Book Card Special */
+.book-card { padding: 0; }
+.book-img { height: 350px; background-size: cover; background-position: center; }
+.book-info { padding: 30px; }
+.price { font-size: 1.8rem; font-weight: 800; color: var(--accent); margin: 15px 0; }
 
-.card-img {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid var(--line);
-}
-
-.card-body {
-  padding: 30px;
-}
-
-.author {
-  color: var(--accent);
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin: 15px 0;
-}
-
-.btn-buy {
-  display: block;
-  text-align: center;
-  padding: 15px;
-  background: var(--glass);
-  border: 1px solid var(--line);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
-}
-
-.btn-buy:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-/* --- شعار الزاوية (Affican Digital Identity) --- */
-.footer-logo-fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 80px;
-  opacity: 0.6;
-  z-index: 100;
-  transition: var(--transition);
-}
-
-.footer-logo-fixed:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* --- الأقسام --- */
-.section { padding: 120px 0; }
+/* Utility */
+.section { padding: 100px 0; }
 .section-alt { background: #080808; }
-.sec-header { text-align: center; }
-.sec-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
-
-/* --- الجوال --- */
-@media (max-width: 768px) {
-  .nav-links { display: none; } /* يفضل بناء قائمة همبرغر لاحقاً */
-  h1 { font-size: 3rem; }
-  .grid-layout { grid-template-columns: 1fr; }
-}
+.footer-logo-fixed { position: fixed; bottom: 30px; right: 30px; width: 70px; z-index: 100; opacity: 0.7; }
