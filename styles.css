@@ -1,576 +1,241 @@
-:root{
-  --bg:#070a10;
-  --card:#0f172a;
-  --text:#e5e7eb;
-  --muted:#a3aab8;
-  --line: rgba(255,255,255,.10);
-  --primary:#ff8c00;
-  --primary2:#00bfff;
-  --shadow: 0 14px 40px rgba(0,0,0,.55);
-  --radius: 18px;
+
+/* Affican Digital - Premium Global Style 2026
+   Design Logic: Luxury, Simplicity, and Visual Power
+*/
+
+:root {
+  --bg: #050505; /* أسود عميق للفخامة */
+  --card: #0d0d0d;
+  --accent: #ff8c00; /* البرتقالي المتوهج من شعارك */
+  --accent-blue: #00bfff; /* الأزرق الرقمي من شعارك */
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --line: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius-lg: 24px;
+  --radius-sm: 12px;
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}
-.container{max-width:1120px;margin:0 auto;padding:0 18px}
-
-.topbar{
-  position:sticky; top:0; z-index:50;
-  background:rgba(7,10,16,.72);
-  border-bottom:1px solid var(--line);
-  backdrop-filter: blur(12px);
-}
-.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
-.brand__logo{height:46px;width:auto;object-fit:contain;filter:drop-shadow(0 0 12px rgba(0,0,0,.7))}
-
-.nav{display:flex;gap:14px;align-items:center}
-.nav a{color:var(--muted);font-weight:800;padding:8px 10px;border-radius:12px}
-.nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
-.nav__cta{background:rgba(255,255,255,.06);border:1px solid var(--line)}
-.nav__cta:hover{background:rgba(255,255,255,.10)}
-
-.iconbtn{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
-  color:var(--text);
-  padding:9px 12px;border-radius:12px;cursor:pointer
-}
-.navbtn { 
-    display: none; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    .nav { 
-        display: none; 
-    }
-
-    .navbtn {
-        display: block;
-        font-size: 26px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    .navbtn::before {
-        content: "☰";
-    }
-}}
-
-.mobileNav{
-  display:none; flex-direction: column;
-  padding:10px 18px 16px;
-  border-top:1px solid var(--line);
-}
-.mobileNav a{padding:10px 12px;border-radius:12px;color:var(--muted);font-weight:800}
-.mobileNav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
-.mobileNav.open{display:flex}
-  display:inline-block;
-  padding:8px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  color:var(--muted);
-  background:rgba(255,255,255,.03);
-}
-h1{margin:14px 0 10px;font-size:clamp(30px,4vw,52px);line-height:1.08}
-.lead{color:var(--muted);font-size:1.06rem;line-height:1.9;margin:0 auto 18px;max-width:760px}
-
-.hero__cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 12px}
-.btn{
-  /* Fix: ensure video shows behind overlay & content */
-
-.hero{
-  position: relative;
-  min-height: 85vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(0,191,255,0.25), transparent 55%),
-    radial-gradient(circle at 80% 70%, rgba(255,140,0,0.25), transparent 55%),
-    linear-gradient(180deg, #070a10 0%, #05070c 100%);
-}
-
-
-.hero__overlay{
-  position: absolute;
-  inset: 0;
-  background: rgba(7,10,16,0.95);
-  z-index: 1;
-}
-.hero__content{
-  position: relative;
-  z-index: 2;
-  padding:12px 16px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  font-weight:900;
-  cursor:pointer;
-}
-  padding:12px 16px;border-radius:14px;
-  border:1px solid var(--line);
-  font-weight:900;cursor:pointer
-}
-.btn--primary{border:none;background:linear-gradient(135deg,var(--primary),var(--primary2));box-shadow:var(--shadow)}
-.btn--ghost{background:rgba(255,255,255,.04)}
-
-.socialRow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0 0}
-.socialBtn{
-  padding:10px 12px;border-radius:14px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  color:var(--muted);
-  font-weight:900;
-}
-.socialBtn:hover{color:var(--text);background:rgba(255,255,255,.06)}
-
-.hero__badges{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-}
-.badge{
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  background:rgba(255,255,255,.03);
-  padding:12px;
-}
-.badge span{font-weight:950;font-size:1.05rem}
-.badge small{display:block;color:var(--muted);margin-top:4px}
-
-.section{padding:76px 0}
-.section--alt{background:rgba(255,255,255,.03)}
-.section__head{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
-.section__head h2{margin:0;font-size:1.95rem}
-.muted{color:var(--muted)}
-
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.box, .card{
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  background:var(--card);
-  box-shadow:var(--shadow);
-}
-.box{padding:18px}
-.pad{padding:18px}
-.list{margin:10px 0 0;padding:0 18px 0 0;color:var(--muted);line-height:1.9}
-
-.workCard{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
-.workCard__thumb{height:140px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,140,0,.22),rgba(0,191,255,.18));font-weight:950}
-.workCard__body{padding:14px}
-.workCard__body h3{margin:0 0 6px}
-
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:start}
-.ticks{display:grid;gap:10px;margin-top:14px}
-.tick{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);font-weight:900}
-
-.contactGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
-.form{padding:18px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-label{display:grid;gap:6px;font-weight:900}
-input,textarea{
-  width:100%;
-  padding:12px;border-radius:14px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  color:var(--text);
-  outline:none;
-}
-textarea{min-height:130px;resize:vertical}
-.form__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-
-.info{display:grid;gap:10px;margin-top:14px}
-.info__item{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(255,255,255,.03)}
-.divider{height:1px;background:var(--line);margin:16px 0}
-
-.footer{border-top:1px solid var(--line);padding:24px 0}
-.footer__inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted)}
-.footerBrand{display:flex;align-items:center;gap:10px}
-.footer__logo{height:34px;width:auto;object-fit:contain;filter:drop-shadow(0 0 10px rgba(0,0,0,.75))}
-
-@media (max-width:920px){
-  .hero{min-height:auto}
-}
-
-.hero__video{
-  position: relative;
-  height: 50vh;
-}
-  .nav{display:none}
-  .navbtn{display:inline-flex}
-  .grid3{grid-template-columns:1fr}
-  .row{grid-template-columns:1fr}
-  .hero__badges{grid-template-columns:1fr}
-
-/* منع التمرير الأفقي */
-html, body {
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* جعل الفيديو متجاوب */
-.hero__video {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* --- الهيدر الزجاجي (Glassmorphism) --- */
+.glass-nav {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  z-index: 1000;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+  padding: 15px 0;
 }
 
-/* تحسين عرض الأقسام على الهاتف */
-@media (max-width:768px){
-  .hero{min-height:auto !important;}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-  .services,
-  .works {
-    display: flex;
-    flex-dire@media (max-width:768px){
-
-  .hero{ min-height:50vh; }
-
-  h1{
-    font-size:28px;
-  }
-
-  .grid3{
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-
-  .section{
-    padding:44px 0;
-  }
-
-    }ction: column;
-    gap: 15px;
-  }
-
-}
-/* ===== Mobile Fixes ===== */
-img{max-width:100%;height:auto;display:block;}
-.container{max-width:1120px;margin:0 auto;padding:0 16px;}
-
-/* خلي الهيرو مناسب للجوال */
-.hero{min-height:60vh;}
-.hero__content{width:100%; text-align:center;}
-.hero__cta{justify-content:center;}
-
-/* ترتيب الأقسام في الجوال */
-@media (max-width: 768px){
-  body{overflow-x:hidden;}
-  h1{font-size: clamp(22px, 6vw, 34px);}
-
-  .nav{display:none;}
-  .navbtn{display:inline-flex;} /* زر القائمة */
-  .mobileNav{padding:10px 12px;}
-
-  .grid3{grid-template-columns:1fr;}        /* الخدمات/الكروت */
-  .about{grid-template-columns:1fr;}        /* قسم من نحن */
-  .contactGrid{grid-template-columns:1fr;}  /* الفورم + المعلومات */
-
-  .hero{min-height:65vh;padding:24px 0;}
-  .hero__badges{grid-template-columns:1fr;gap:10px;}
-  .socialRow{flex-wrap:wrap;gap:10px;}
-}
-/* ===== تحسين تجربة الهاتف ===== */
-
-@media (max-width:768px){
-
-  /* الشعار */
-  .brand__logo{
-    height:36px;
-  }
-
-  /* الهيرو */
-  .hero{
-    padding:30px 0;
-    min-height:70vh;
-  }
-
-  .hero__content{
-    padding:0 14px;
-  }
-
-  h1{
-    font-size:28px;
-    line-height:1.3;
-  }
-
-  .lead{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  /* الأزرار الرئيسية */
-  .hero__cta{
-    flex-direction:column;
-    gap:12px;
-  }
-
-  .btn{
-    width:100%;
-    text-align:center;
-  }
-
-  /* أزرار السوشال */
-  .socialRow{
-    justify-content:center;
-    gap:8px;
-  }
-
-  .socialBtn{
-    flex:1;
-    text-align:center;
-  }
-
-  /* البطاقات */
-  .hero__badges{
-    grid-template-columns:1fr;
-    gap:14px;
-    margin-top:22px;
-  }
-
-  .badge{
-    padding:18px;
-  }
-}
-.btn--primary{
-  box-shadow: 0 15px 35px rgba(255,140,0,.25);
-  transition: all .3s ease;
+.logo {
+  height: 50px;
+  transition: var(--transition);
 }
 
-.btn--primary:active{
-  transform: scale(.96);
-  box-shadow: 0 8px 20px rgba(255,140,0,.35);
-}
-.hero__content{
-  animation: fadeUp .8s ease forwards;
-  opacity:0;
-  transform: translateY(20px);
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
 }
 
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
-}
-@media (max-width: 768px){
-
-  .container{ padding:15px !important; }
-
-  .hero{
-    min-height:70vh !important;
-    padding:24px 0 !important;
-  }
-
-  h1{
-    font-size: clamp(22px, 6vw, 34px) !important;
-  }
-
-  .lead{
-    font-size:15px !important;
-    line-height:1.8 !important;
-  }
-
-  .hero__cta{
-    flex-direction: column !important;
-    gap:12px !important;
-  }
-
-  .btn{
-    width:100% !important;
-    text-align:center !important;
-  }
-
-  .socialRow{
-    justify-content:center !important;
-    flex-wrap: wrap !important;
-    gap:10px !important;
-  }
-
-  .socialBtn{
-    flex:1 !important;
-    text-align:center !important;
-  }
-
-  .hero__badges{
-    grid-template-columns: 1fr !important;
-    gap:14px !important;
-    margin-top:22px !important;
-  }
-
-  .nav{display:none !important;}
-  .navbtn{display:inline-flex !important;}
-
-}
-@media (max-width: 768px){
-  .hero{ padding: 20px 0; }
-  h1{ font-size: 26px; line-height: 1.2; }
-  .lead{ font-size: 14px; line-height: 1.7; }
-}
-@media (max-width: 768px){
-  .hero__badges{ gap: 10px; margin-top: 16px; }
-  .badge{ padding: 14px; }
-}
-@media (max-width:768px){
-
-  .section{
-    padding: 48px 0;
-  }
-
-  .section h2{
-    margin-bottom: 10px;
-  }
-
-}
-/* ===== المرحلة 2: تفاعل الأزرار والبطاقات ===== */
-
-/* الأزرار */
-.btn{
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
-  -webkit-tap-highlight-color: transparent;
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-.btn:active{
-  transform: scale(.98);
-  filter: brightness(1.05);
+.nav-links a:hover {
+  color: var(--accent);
 }
 
-/* أزرار السوشيال */
-.socialBtn{
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-  -webkit-tap-highlight-color: transparent;
+.btn-premium {
+  background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+  color: white !important;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600 !important;
 }
 
-.socialBtn:active{
-  transform: scale(.98);
+/* --- الهيرو (الواجهة الرئيسية) --- */
+.hero-premium {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.1), transparent),
+              radial-gradient(circle at bottom left, rgba(0, 191, 255, 0.1), transparent);
 }
 
-/* البطاقات (badges / cards) */
-.badge, .card, .serviceCard{
-  transition: transform .18s ease, box-shadow .18s ease;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
-.badge:active, .card:active, .serviceCard:active{
-  transform: translateY(2px);
-}
-a, button{
-  -webkit-tap-highlight-color: transparent;
-}
-@media (hover:hover){
-  .btn:hover{ transform: translateY(-1px); }
-  .badge:hover, .card:hover, .serviceCard:hover{ transform: translateY(-2px); }
-}
-.badge{
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.badge:active{
-  transform: scale(.97);
-}
-.card{
-  transition: transform .18s ease, box-shadow .18s ease;
+.badge-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 
-.card:active{
-  transform: scale(.98);
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, #fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (hover:hover){
-  .card:hover{
-    transform: translateY(-4px);
-  }
-}
-/* ===== تأثير احترافي للبطاقات ===== */
-
-.badge,
-.box{
-  transition: transform .2s ease, box-shadow .2s ease;
+.lead-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 40px;
 }
 
-/* تأثير عند الضغط على الهاتف */
-.badge:active,
-.box:active{
-  transform: scale(.97);
+.btn-main {
+  padding: 18px 40px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  margin-left: 15px;
+  transition: var(--transition);
 }
 
-/* تأثير hover للكمبيوتر فقط */
-@media (hover:hover){
-  .badge:hover,
-  .box:hover{
-    transform: translateY(-6px);
-  }
-}
-/* ===== Scroll Reveal Animation ===== */
-.reveal{
-  opacity: 0;
-  transform: translateY(18px);
-  filter: blur(6px);
-  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
-  will-change: transform, opacity, filter;
+.btn-main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255,255,255,0.1);
 }
 
-.reveal.in{
+/* --- شبكة الكتب والخدمات (Grid Layout) --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.premium-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.premium-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-10px);
+}
+
+.card-img {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.author {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.btn-buy {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.btn-buy:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --- شعار الزاوية (Affican Digital Identity) --- */
+.footer-logo-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  opacity: 0.6;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.footer-logo-fixed:hover {
   opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
+  transform: scale(1.1);
 }
 
-/* حركة خفيفة مختلفة للبطاقات */
-.reveal.card{
-  transform: translateY(22px) scale(.98);
-}
-.reveal.card.in{
-  transform: translateY(0) scale(1);
-}
+/* --- الأقسام --- */
+.section { padding: 120px 0; }
+.section-alt { background: #080808; }
+.sec-header { text-align: center; }
+.sec-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
 
-/* احترام تقليل الحركة (Accessibility) */
-@media (prefers-reduced-motion: reduce){
-  .reveal{
-    transition: none;
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
-}
-.reveal{
-  opacity: 0;
-  transform: translateY(18px);
-  filter: blur(6px);
-  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
-}
-
-.reveal.in{
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-}
-.box:nth-child(1){ transition-delay: .1s; }
-.box:nth-child(2){ transition-delay: .2s; }
-.box:nth-child(3){ transition-delay: .3s; }
-/* Mobile Nav Button + Menu */
-.navbtn{ display:none; }
-
-@media (max-width: 768px){
-  .nav{ display:none !important; }
-
-  .navbtn{
-  display:flex !important;
-  align-items:center;
-  justify-content:center;
-  width:44px;
-  height:44px;
-  font-size:28px;
-  background:none;
-  border:none;
-  color:#fff;
-  cursor:pointer;
-  }
-
-  .navbtn::before{ content:"≡"; }
-
-  .mobileNav.open{ display:flex !important; }
+/* --- الجوال --- */
+@media (max-width: 768px) {
+  .nav-links { display: none; } /* يفضل بناء قائمة همبرغر لاحقاً */
+  h1 { font-size: 3rem; }
+  .grid-layout { grid-template-columns: 1fr; }
 }
