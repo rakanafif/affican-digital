@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr" id="html-tag">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affican Digital Biz Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #030509; --card: #0b1120; --primary: #ff8c00; --accent: #00bfff; --text: #f3f4f6; --muted: #9ca3af; --border: rgba(255, 255, 255, 0.05); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background: var(--bg); color: var(--text); scroll-behavior: smooth; overflow-x: hidden; text-align: left; }
+        body { background: var(--bg); color: var(--text); scroll-behavior: smooth; text-align: left; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
         header { position: sticky; top: 0; z-index: 1000; background: rgba(3, 5, 9, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); padding: 10px 0; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo-box img { height: 50px; cursor: pointer; }
+        .logo-box img { height: 45px; }
         .lang-switcher { display: flex; gap: 8px; }
         .l-btn { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; }
         .l-btn.active { background: var(--primary); border: none; }
-        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 6px 15px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; transition: 0.3s; }
+        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 6px 15px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; }
         .video-hero { width: 100%; max-width: 900px; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
         video { width: 100%; display: block; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 0; }
-        .service-card { background: var(--card); border-radius: 24px; border: 1px solid var(--border); overflow: hidden; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .service-card { background: var(--card); border-radius: 24px; border: 1px solid var(--border); overflow: hidden; text-decoration: none; color: inherit; display: block; transition: 0.3s; }
         .service-card:hover { transform: translateY(-8px); border-color: var(--accent); }
         .s-img { width: 100%; height: 220px; object-fit: cover; }
         .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; padding: 30px 0; }
         .book-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; text-align: center; }
         .book-img { width: 100%; height: 260px; object-fit: cover; }
-        .price { color: var(--primary); font-weight: 900; margin: 8px 0; display: block; font-size: 1rem; }
+        .price { color: var(--primary); font-weight: 900; margin: 8px 0; display: block; }
         .buy-btn { background: var(--primary); color: #fff; padding: 8px; border-radius: 8px; text-decoration: none; display: block; font-weight: 900; font-size: 0.8rem; }
         [dir="rtl"] { text-align: right; }
     </style>
@@ -39,52 +38,56 @@
                 <button class="l-btn" onclick="setLang('ar')">AR</button>
                 <button class="l-btn" onclick="setLang('en')">EN</button>
             </div>
-            <a href="index.html" class="logo-box"><img src="logo.png" alt="Affican Digital"></a>
+            <a href="index.html" class="logo-box"><img src="logo.png" alt="Logo"></a>
         </div>
         <a href="login.html" class="login-btn" id="login-txt">Accès Auteurs</a>
     </div></header>
 
     <section class="container" style="text-align:center; padding-top:40px;">
-        <h1 id="h-t" style="font-size: 2.2rem; font-weight: 900;">Innovation Numérique sans Limites</h1>
+        <h1 id="h-t">Innovation Numérique sans Limites</h1>
         <div class="video-hero"><video controls poster="logo.png"><source src="intro.mp4" type="video/mp4"></video></div>
     </section>
 
     <section class="container">
-        <h2 style="text-align:center; color:var(--accent); margin: 40px 0 20px;" id="s-t">Nos Services</h2>
+        <h2 style="text-align:center; color:var(--accent); margin: 40px 0 20px;" id="s-t">Nos Services Marketing</h2>
         <div class="services-grid">
-            <a href="content.html" class="service-card"><img src="content.png" class="s-img"><div style="padding:20px;"><h3>Création de Contenu</h3></div></a>
-            <a href="ads.html" class="service-card"><img src="ads.png" class="s-img"><div style="padding:20px;"><h3>Croissance & Ads</h3></div></a>
-            <a href="management.html" class="service-card"><img src="medical.png" class="s-img"><div style="padding:20px;"><h3>Solutions Médicales</h3></div></a>
+            <a href="content.html" class="service-card"><img src="file_000000004ed4720cb619264a408d3cdc.png" class="s-img"><div style="padding:20px;"><h3>Création de Contenu</h3></div></a>
+            <a href="ads.html" class="service-card"><img src="file_000000005d9c71fd97147d4aeb09530c.png" class="s-img"><div style="padding:20px;"><h3>Croissance & Ads</h3></div></a>
+            <a href="management.html" class="service-card"><img src="1772696383756.png" class="s-img"><div style="padding:20px;"><h3>Solutions Médicales</h3></div></a>
         </div>
     </section>
 
     <section class="container">
         <h2 style="color:var(--primary); text-align:center;" id="st-t">Boutique Numérique</h2>
-        <div style="text-align:center; margin: 20px 0;"><a href="register.html" class="login-btn" style="border-color:var(--accent); color:var(--accent);" id="add-txt">Vendre votre livre</a></div>
         <div class="books-grid">
             <div class="book-card"><img src="abyss.png" class="book-img"><div class="book-info"><h3>L'Abîme</h3><span class="price">$35.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="millionaire.png" class="book-img"><div class="book-info"><h3>Millionaire Mindset</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="light.png" class="book-img"><div class="book-info"><h3>Chemin de Lumière</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="truth.png" class="book-img"><div class="book-info"><h3> نبض الحقيقة</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="conflict.png" class="book-img"><div class="book-info"><h3>صراع العقول</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3>حكمة العقل</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364167635.png" class="book-img"><div class="book-info"><h3>Chemin de Lumière</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364423078.png" class="book-img"><div class="book-info"><h3>Conflit des Esprits</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773567104359.png" class="book-img"><div class="book-info"><h3>Pouls de la Vérité</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773344022401~2.jpg" class="book-img"><div class="book-info"><h3>Secrets du Coeur</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773344921541.png" class="book-img"><div class="book-info"><h3>Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364900688.png" class="book-img"><div class="book-info"><h3>Jeu Social</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3>Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364542485.png" class="book-img"><div class="book-info"><h3>Célébration</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="idealism.png" class="book-img"><div class="book-info"><h3>Idéalisme</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="mirror.png" class="book-img"><div class="book-info"><h3>Miroir de l'Ennemi</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364683540.png" class="book-img"><div class="book-info"><h3>Dernière Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773365091720.png" class="book-img"><div class="book-info"><h3>Avant Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="enemy_mirror.png" class="book-img"><div class="book-info"><h3>Miroir de l'Ennemi</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
         </div>
     </section>
 
     <script>
         const trans = {
-            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", login:"Accès Auteurs", add:"Vendre votre livre", buy:"Acheter" },
-            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", login:"دخول المؤلفين", add:"أضف كتابك الآن", buy:"شراء" },
-            en: { dir:"ltr", ht:"Digital Innovation Without Limits", login:"Author Login", add:"Sell Your Book", buy:"Buy Now" }
+            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", login:"Accès Auteurs", s1:"Création", buy:"Acheter" },
+            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", login:"دخول المؤلفين", s1:"صناعة", buy:"شراء" },
+            en: { dir:"ltr", ht:"Digital Innovation Without Limits", login:"Author Login", s1:"Creation", buy:"Buy Now" }
         };
         function setLang(l) {
             const d = trans[l];
             document.getElementById('html-tag').dir = d.dir;
             document.getElementById('h-t').textContent = d.ht;
             document.getElementById('login-txt').textContent = d.login;
-            document.getElementById('add-txt').textContent = d.add;
             document.querySelectorAll('.b-txt').forEach(el => el.textContent = d.buy);
             document.querySelectorAll('.l-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
