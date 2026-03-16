@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr" id="html-tag">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affican Digital Biz Solutions</title>
+    <title>Affican Digital | Plateforme Intégrale</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #030509; --card: #0b1120; --primary: #ff8c00; --accent: #00bfff; --text: #f3f4f6; --border: rgba(255, 255, 255, 0.05); }
@@ -12,20 +12,24 @@
         header { position: sticky; top: 0; z-index: 1000; background: rgba(3, 5, 9, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); padding: 10px 0; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
         .logo-box img { height: 45px; }
-        .lang-switcher { display: flex; gap: 5px; }
+        .lang-switcher { display: flex; gap: 8px; }
         .l-btn { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; }
         .l-btn.active { background: var(--primary); border: none; font-weight: 900; }
-        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; transition: 0.3s; }
+        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; }
+        
+        /* Hero Video (Old Intro Maintained) */
         .video-hero { width: 100%; max-width: 850px; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
         video { width: 100%; display: block; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px 0; }
-        .service-card { background: var(--card); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; text-decoration: none; color: inherit; display: block; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-8px); border-color: var(--accent); }
-        .s-img { width: 100%; height: 200px; object-fit: cover; }
-        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 15px; padding: 30px 0; }
+
+        /* Multi-Video Gallery Section */
+        .video-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 0; }
+        .video-card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid var(--border); }
+        .video-card video { height: 180px; object-fit: cover; }
+
+        /* Books & Services */
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; padding: 30px 0; }
         .book-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; text-align: center; }
         .book-img { width: 100%; height: 260px; object-fit: cover; background: #111; }
-        .price { color: var(--primary); font-weight: 900; margin: 8px 0; display: block; }
         .buy-btn { background: var(--primary); color: #fff; padding: 8px; border-radius: 8px; text-decoration: none; display: block; font-weight: 900; font-size: 0.8rem; }
         [dir="rtl"] { text-align: right; }
     </style>
@@ -45,55 +49,70 @@
 
     <section class="container" style="text-align:center; padding-top:40px;">
         <h1 id="h-t" style="font-size: 2.2rem; font-weight: 900;">Innovation Numérique sans Limites</h1>
-        <div class="video-hero"><video controls poster="logo.png"><source src="intro.mp4" type="video/mp4"></video></div>
-    </section>
-
-    <section class="container">
-        <h2 id="s-title" style="text-align:center; color:var(--accent); margin-bottom: 20px;">Nos Services</h2>
-        <div class="services-grid">
-            <a href="content.html" class="service-card"><img src="file_000000004ed4720cb619264a408d3cdc.png" class="s-img"><div style="padding:15px;"><h3 id="s1-t">Création de Contenu</h3></div></a>
-            <a href="ads.html" class="service-card"><img src="file_000000005d9c71fd97147d4aeb09530c.png" class="s-img"><div style="padding:15px;"><h3 id="s2-t">Croissance & Ads</h3></div></a>
-            <a href="management.html" class="service-card"><img src="1772696383756.png" class="s-img"><div style="padding:15px;"><h3 id="s3-t">Solutions Médicales</h3></div></a>
+        <div class="video-hero">
+            <video controls poster="logo.png">
+                <source src="intro.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
 
     <section class="container">
-        <h2 style="color:var(--primary); text-align:center;" id="st-t">Boutique Numérique</h2>
+        <h2 id="v-t" style="text-align:center; color:var(--accent); margin: 30px 0;">Notre Vision & Impact</h2>
+        <div class="video-gallery">
+            <div class="video-card"><video controls><source src="lv_0_20260311203103.mp4" type="video/mp4"></video></div> <div class="video-card"><video controls><source src="_0_20260310024820.mp4" type="video/mp4"></video></div> <div class="video-card"><video controls><source src="grok_video_2026-03-09-22-40-22.mp4" type="video/mp4"></video></div> </div>
+    </section>
+
+    <section class="container">
+        <h2 id="s-title" style="text-align:center; color:var(--primary); margin: 30px 0;">Nos Services Experts</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+            <a href="content.html" style="text-decoration:none;"><div class="book-card"><img src="file_000000004ed4720cb619264a408d3cdc.png" style="height:180px; width:100%; object-fit:cover;"><h3 id="s1-t" style="padding:15px; color:white;">Création de Contenu</h3></div></a>
+            <a href="ads.html" style="text-decoration:none;"><div class="book-card"><img src="file_000000005d9c71fd97147d4aeb09530c.png" style="height:180px; width:100%; object-fit:cover;"><h3 id="s2-t" style="padding:15px; color:white;">Croissance & Ads</h3></div></a>
+            <a href="management.html" style="text-decoration:none;"><div class="book-card"><img src="1772696383756.png" style="height:180px; width:100%; object-fit:cover;"><h3 id="s3-t" style="padding:15px; color:white;">Solutions Médicales</h3></div></a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 style="color:var(--accent); text-align:center; margin-top:50px;" id="st-t">Boutique Numérique</h2>
         <div class="books-grid">
             <div class="book-card"><img src="abyss.png" class="book-img"><div class="book-info"><h3 id="b1-t">L'Abîme</h3><span class="price">$35.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="millionaire.png" class="book-img"><div class="book-info"><h3 id="b2-t">Millionaire Mindset</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="millionaire.png" class="book-img"><div class="book-info"><h3 id="b2-t">Millionaire</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="light.png" class="book-img"><div class="book-info"><h3 id="b3-t">Chemin de Lumière</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="conflict.png" class="book-img"><div class="book-info"><h3 id="b4-t">Conflit des Esprits</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="truth.png" class="book-img"><div class="book-info"><h3 id="b5-t">Pouls de la Vérité</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="1773344022401~2.jpg" class="book-img"><div class="book-info"><h3 id="b6-t">Secrets du Coeur</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="control.png" class="book-img"><div class="book-info"><h3 id="b7-t">Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="social.png" class="book-img"><div class="book-info"><h3 id="b8-t">Jeu Social</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3 id="b9-t">Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="truth.png" class="book-img"><div class="book-info"><h3 id="b4-t">Pouls de la Vérité</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="conflict.png" class="book-img"><div class="book-info"><h3 id="b5-t">Conflit des Esprits</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="idealism.png" class="book-img"><div class="book-info"><h3 id="b6-t">Idéalisme</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3 id="b7-t">Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="control.png" class="book-img"><div class="book-info"><h3 id="b8-t">Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="mirror.png" class="book-img"><div class="book-info"><h3 id="b9-t">Miroir</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="celebration.png" class="book-img"><div class="book-info"><h3 id="b10-t">Célébration</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="idealism.png" class="book-img"><div class="book-info"><h3 id="b11-t">Idéalisme</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="1773364683540.png" class="book-img"><div class="book-info"><h3 id="b12-t">Dernière Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="collapse.png" class="book-img"><div class="book-info"><h3 id="b13-t">Avant Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="mirror.png" class="book-img"><div class="book-info"><h3 id="b14-t">Miroir de l'Ennemi</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="collapse.png" class="book-img"><div class="book-info"><h3 id="b11-t">Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="rupture.png" class="book-img"><div class="book-info"><h3 id="b12-t">Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            
+            <div class="book-card"><img src="Polish_20260313_020136867.png" class="book-img"><div class="book-info"><h3 id="b13-t">Regard Révélé</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="Polish_20260313_020216884.png" class="book-img"><div class="book-info"><h3 id="b14-t">Feu Intérieur</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="Polish_20260313_020236165.png" class="book-img"><div class="book-info"><h3 id="b15-t">Chute de Puissance</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="Polish_20260313_020305034.png" class="book-img"><div class="book-info"><h3 id="b16-t">Liberté Totale</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="Polish_20260313_020350853.png" class="book-img"><div class="book-info"><h3 id="b17-t">Étoiles du Cœur</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="Polish_20260313_020408673.png" class="book-img"><div class="book-info"><h3 id="b18-t">Destin Choisi</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="خبير تسويق رقمي_20260309_001207_٠٠٠٠.png" class="book-img"><div class="book-info"><h3 id="b19-t">Expert Digital</h3><span class="price">$25.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
         </div>
     </section>
 
     <script>
         const trans = {
-            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", login:"Accès Auteurs", stitle:"Nos Services", s1:"Création de Contenu", s2:"Croissance & Ads", s3:"Solutions Médicales", stt:"Boutique Numérique", buy:"Acheter", b1:"L'Abîme", b2:"Millionaire Mindset", b3:"Chemin de Lumière", b4:"Conflit des Esprits", b5:"Pouls de la Vérité", b6:"Secrets du Coeur", b7:"Fils de Contrôle", b8:"Jeu Social", b9:"Sagesse", b10:"Célébration", b11:"Idéalisme", b12:"Dernière Rupture", b13:"Avant Effondrement", b14:"Miroir de l'Ennemi" },
-            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", login:"دخول المؤلفين", stitle:"خدماتنا", s1:"صناعة المحتوى", s2:"النمو والإعلانات", s3:"الحلول الطبية", stt:"المتجر الرقمي", buy:"شراء", b1:"الهاوية", b2:"عقلية المليونير", b3:"طريق النور", b4:"صراع العقول", b5:"نبض الحقيقة", b6:"أسرار القلب", b7:"خيوط السيطرة", b8:"اللعبة الاجتماعية", b9:"حكمة العقل", b10:"خارج الاحتفال", b11:"المثالية", b12:"الانكسار الأخير", b13:"ليلة قبل الانهيار", b14:"مرآة العدو" },
-            en: { dir:"ltr", ht:"Digital Innovation Without Limits", login:"Author Login", stitle:"Our Services", s1:"Content Creation", s2:"Growth & Ads", s3:"Medical Solutions", stt:"Digital Store", buy:"Buy Now", b1:"The Abyss", b2:"Millionaire Mindset", b3:"Path of Light", b4:"Conflict of Minds", b5:"Pulse of Truth", b6:"Heart Secrets", b7:"Control Strings", b8:"Social Game", b9:"Wisdom", b10:"Celebration", b11:"Idealism", b12:"Last Rupture", b13:"Before Collapse", b14:"Enemy Mirror" }
+            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", login:"Accès Auteurs", vt:"Notre Vision & Impact", s1:"Création", s2:"Ads", s3:"Médecine", buy:"Acheter", b1:"L'Abîme", b13:"Regard Révélé", b19:"Expert Digital" },
+            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", login:"دخول المؤلفين", vt:"رؤيتنا وتأثيرنا", s1:"صناعة", s2:"إعلانات", s3:"طب", buy:"شراء", b1:"الهاوية", b13:"حين تكشف النظرة", b19:"خبير تسويق" },
+            en: { dir:"ltr", ht:"Innovation Without Limits", login:"Author Login", vt:"Our Vision & Impact", s1:"Creation", s2:"Ads", s3:"Medical", buy:"Buy", b1:"The Abyss", b13:"Revealed Look", b19:"Marketing Expert" }
         };
         function setLang(l, btn) {
             const d = trans[l];
             document.getElementById('html-tag').dir = d.dir;
             document.getElementById('h-t').textContent = d.ht;
+            document.getElementById('v-t').textContent = d.vt;
             document.getElementById('login-txt').textContent = d.login;
-            document.getElementById('s-title').textContent = d.stitle;
-            document.getElementById('s1-t').textContent = d.s1;
-            document.getElementById('s2-t').textContent = d.s2;
-            document.getElementById('s3-t').textContent = d.s3;
-            document.getElementById('st-t').textContent = d.stt;
-            for(let i=1; i<=14; i++) { document.getElementById(`b${i}-t`).textContent = d[`b${i}`]; }
+            for(let i=1; i<=19; i++) { 
+                let el = document.getElementById(`b${i}-t`);
+                if(el) el.textContent = d[`b${i}`] || el.textContent; 
+            }
             document.querySelectorAll('.b-txt').forEach(el => el.textContent = d.buy);
             document.querySelectorAll('.l-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
