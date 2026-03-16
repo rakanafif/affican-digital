@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter un Livre | Affican Digital</title>
+    <meta charset="UTF-8"><title>Publier | Affican Digital</title>
     <style>
         body { background: #030509; color: white; font-family: sans-serif; padding: 40px 20px; text-align: center; }
-        .form-box { max-width: 500px; margin: 0 auto; background: #0b1120; padding: 30px; border-radius: 20px; border: 1px solid #00bfff; }
-        input, select { width: 100%; padding: 10px; margin: 10px 0; background: #1e293b; border: 1px solid #334155; border-radius: 8px; color: white; }
-        label { display: block; text-align: left; font-size: 0.8rem; color: #9ca3af; }
+        .box { max-width: 500px; margin: 0 auto; background: #0b1120; padding: 35px; border-radius: 24px; border: 1px solid #00bfff; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; background: #1e293b; border: 1px solid #334155; border-radius: 10px; color: white; }
     </style>
 </head>
 <body>
-    <div class="form-box">
-        <h2>Publier votre Livre</h2>
-        <input type="text" placeholder="Titre du livre">
-        <select><option>Genre : Roman</option><option>Genre : Business</option><option>Genre : Psychologie</option></select>
-        <input type="number" placeholder="Prix en $">
-        <label>Upload Couverture (PNG)</label>
+    <div class="box">
+        <h2>Publier votre livre</h2>
+        <input type="text" placeholder="Titre complet">
+        <select><option>Business</option><option>Littérature</option><option>Médecine</option></select>
+        <input type="number" placeholder="Prix souhaité ($)">
+        <label style="font-size:0.8rem; color:#9ca3af; display:block; text-align:left;">Fichier PNG de couverture :</label>
         <input type="file" accept="image/png">
-        <button style="width: 100%; padding: 12px; background: #ff8c00; border: none; border-radius: 8px; color: white; font-weight: 700;">Soumettre pour validation</button>
-        <a href="index.html" style="color: #00bfff; display: block; margin-top: 15px; text-decoration: none;">Annuler</a>
+        <button style="width: 100%; padding: 12px; background: #ff8c00; border: none; border-radius: 10px; color: white; font-weight: 900; cursor: pointer;">Soumettre le livre</button>
+        <a href="index.html" style="color: #00bfff; display: block; margin-top: 20px; text-decoration: none;">Annuler</a>
     </div>
 </body>
 </html>
-
