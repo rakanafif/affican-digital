@@ -2,52 +2,83 @@
 <html lang="fr" dir="ltr" id="html-tag">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affican Digital | Plateforme Officielle</title>
+    <title>Affican Digital | Solutions Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --bg: #030509; --card: #0b1120; --primary: #ff8c00; --accent: #00bfff; --text: #f3f4f6; --border: rgba(255, 255, 255, 0.05); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background: var(--bg); color: var(--text); scroll-behavior: smooth; text-align: left; transition: 0.3s; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
+        
         header { position: sticky; top: 0; z-index: 1000; background: rgba(3, 5, 9, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); padding: 10px 0; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo-box img { height: 45px; }
-        .lang-switcher { display: flex; gap: 5px; }
-        .l-btn { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; }
-        .l-btn.active { background: var(--primary); border: none; font-weight: 900; }
-        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; }
-        .hero-v { width: 100%; max-width: 850px; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
+        
+        .social-top { display: flex; gap: 15px; margin-left: 20px; }
+        .social-top a { color: var(--text); font-size: 1.2rem; transition: 0.3s; }
+        .social-top a:hover { color: var(--accent); }
+
+        .lang-switcher { display: flex; gap: 5px; background: rgba(255,255,255,0.05); padding: 3px; border-radius: 8px; }
+        .l-btn { background: transparent; border: none; color: var(--text); padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.7rem; font-weight: 700; }
+        .l-btn.active { background: var(--primary); color: white; }
+
+        .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; transition: 0.3s; }
+        .login-btn:hover { background: var(--primary); color: white; }
+        
+        .hero-v { width: 100%; max-width: 850px; margin: 25px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
         video { width: 100%; display: block; }
+
+        .consult-btn { display: inline-block; background: linear-gradient(45deg, var(--primary), #ffa500); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 1.1rem; margin: 20px 0; box-shadow: 0 10px 20px rgba(255,140,0,0.2); transition: 0.3s; }
+        .consult-btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255,140,0,0.4); }
+
         .v-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 30px 0; }
         .v-card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid var(--border); }
+
         .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 15px; padding: 30px 0; }
         .book-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; text-align: center; }
         .book-img { width: 100%; height: 260px; object-fit: cover; background: #111; }
         .buy-btn { background: var(--primary); color: #fff; padding: 8px; border-radius: 8px; text-decoration: none; display: block; font-weight: 900; font-size: 0.8rem; margin: 10px; }
+        
+        footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; margin-top: 50px; }
+        .social-footer { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; }
+        .social-footer a { color: var(--text); font-size: 1.8rem; transition: 0.3s; }
+        .social-footer a:hover { color: var(--primary); }
+
         [dir="rtl"] { text-align: right; }
     </style>
 </head>
 <body>
     <header><div class="container nav-wrapper">
-        <div style="display:flex; align-items:center; gap:12px;">
+        <div style="display:flex; align-items:center;">
             <div class="lang-switcher">
                 <button class="l-btn active" onclick="setLang('fr', this)">FR</button>
                 <button class="l-btn" onclick="setLang('ar', this)">AR</button>
                 <button class="l-btn" onclick="setLang('en', this)">EN</button>
             </div>
-            <a href="index.html" class="logo-box"><img src="logo.png" alt="Logo"></a>
+            <div class="social-top">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
+        <a href="index.html" class="logo-box"><img src="logo.png" alt="Logo" style="height:45px;"></a>
         <a href="login.html" class="login-btn" id="login-txt">Accès Auteurs</a>
     </div></header>
 
     <section class="container" style="text-align:center; padding-top:30px;">
-        <h1 id="h-t">Innovation Numérique sans Limites</h1>
-        <div class="hero-v"><video controls poster="logo.png"><source src="intro.mp4" type="video/mp4"></video></div> </section>
+        <h1 id="h-t" style="font-size: 2.2rem; font-weight: 900;">Innovation Numérique sans Limites</h1>
+        <div class="hero-v">
+            <video controls poster="logo.png"><source src="intro.mp4" type="video/mp4"></video>
+        </div>
+        <a href="https://wa.me/213542961475" class="consult-btn" id="c-btn">Réserver une Consultation</a>
+    </section>
 
     <section class="container">
         <h2 id="v-t" style="text-align:center; color:var(--accent); margin-top: 30px;">Notre Vision & Impact</h2>
         <div class="v-grid">
-            <div class="v-card"><video controls><source src="lv_0_20260311203103.mp4" type="video/mp4"></video></div> <div class="v-card"><video controls><source src="grok_video_2026-03-09-22-40-22.mp4" type="video/mp4"></video></div> </div>
+            <div class="v-card"><video controls><source src="lv_0_20260311203103.mp4" type="video/mp4"></video></div>
+            <div class="v-card"><video controls><source src="grok_video_2026-03-09-22-40-22.mp4" type="video/mp4"></video></div>
+        </div>
     </section>
 
     <section class="container">
@@ -71,9 +102,9 @@
             <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3 id="b7-t">Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="1773344921541.png" class="book-img"><div class="book-info"><h3 id="b8-t">Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="enemy_mirror.png" class="book-img"><div class="book-info"><h3 id="b9-t">Miroir</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="1773364542485.png" class="book-img"><div class="book-info"><h3 id="b10-t">Célébration</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364542485.png" class="book-img"><div class="book-info"><h3 id="b10-t">Céléبرة</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="1773365091720.png" class="book-img"><div class="book-info"><h3 id="b11-t">Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
-            <div class="book-card"><img src="rupture.png" class="book-img"><div class="book-info"><h3 id="b12-t">Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
+            <div class="book-card"><img src="1773364683540.png" class="book-img"><div class="book-info"><h3 id="b12-t">Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="Polish_20260313_020136867.png" class="book-img"><div class="book-info"><h3 id="b13-t">Regard Révélé</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="Polish_20260313_020216884.png" class="book-img"><div class="book-info"><h3 id="b14-t">Feu Intérieur</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
             <div class="book-card"><img src="Polish_20260313_020236165.png" class="book-img"><div class="book-info"><h3 id="b15-t">Chute de Puissance</h3><span class="price">$30.00</span><a href="#" class="buy-btn b-txt">Acheter</a></div></div>
@@ -83,16 +114,26 @@
         </div>
     </section>
 
+    <footer>
+        <div class="social-footer">
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p id="foot-t">© 2026 Affican Digital Solutions. Tous droits réservés.</p>
+    </footer>
+
     <script>
         const trans = {
-            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", login:"Accès Auteurs", vt:"Notre Vision & Impact", stitle:"Nos Services Experts", s1:"Création de Contenu", s2:"Croissance & Ads", s3:"Solutions Médicales", stt:"Boutique Numérique", buy:"Acheter", b1:"L'Abîme", b13:"Regard Révélé", b14:"Feu Intérieur", b18:"Destin" },
-            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", login:"دخول المؤلفين", vt:"رؤيتنا وتأثيرنا", stitle:"خدماتنا الرقمية", s1:"صناعة المحتوى", s2:"النمو والإعلانات", s3:"الحلول الطبية", stt:"المتجر الرقمي", buy:"شراء", b1:"الهاوية", b13:"حين تكشف النظرة", b14:"عبر النار", b18:"مفترق المصير" },
-            en: { dir:"ltr", ht:"Digital Innovation Without Limits", login:"Author Login", vt:"Our Vision & Impact", stitle:"Our Expert Services", s1:"Content Creation", s2:"Growth & Ads", s3:"Medical Solutions", stt:"Digital Store", buy:"Buy Now", b1:"The Abyss", b13:"Revealed Look", b14:"Through Fire", b18:"Fate" }
+            fr: { dir:"ltr", ht:"Innovation Numérique sans Limites", cbtn:"Réserver une Consultation", login:"Accès Auteurs", vt:"Notre Vision & Impact", stitle:"Nos Services Experts", s1:"Création de Contenu", s2:"Croissance & Ads", s3:"Solutions Médicales", stt:"Boutique Numérique", buy:"Acheter", foot:"© 2026 Affican Digital. Tous droits réservés.", b1:"L'Abîme", b2:"Millionaire", b3:"Lumière", b4:"Vérité", b5:"Conflit", b6:"Idéalisme", b7:"Sagesse", b8:"Contrôle", b9:"Miroir", b10:"Célébration", b11:"Effondrement", b12:"Rupture", b13:"Regard", b14:"Feu", b15:"Chute", b16:"Liberté", b17:"Étoiles", b18:"Destin" },
+            ar: { dir:"rtl", ht:"الابتكار الرقمي بلا حدود", cbtn:"طلب استشارة مجانية", login:"دخول المؤلفين", vt:"رؤيتنا وتأثيرنا", stitle:"خدمات الخبراء لدينا", s1:"صناعة المحتوى", s2:"النمو والإعلانات", s3:"الحلول الطبية", stt:"المتجر الرقمي", buy:"شراء", foot:"© 2026 أفيكان ديجيتال. جميع الحقوق محفوظة.", b1:"الهاوية", b2:"عقلية المليونير", b3:"طريق النور", b4:"نبض الحقيقة", b5:"صراع العقول", b6:"المثالية", b7:"حكمة العقل", b8:"خيوط السيطرة", b9:"مرآة العدو", b10:"خارج الاحتفال", b11:"ليلة الانهيار", b12:"الانكسار الأخير", b13:"حين تكشف النظرة", b14:"الطريق عبر النار", b15:"السقوط نحو القوة", b16:"كسر القيود", b17:"ضوء النجوم", b18:"مفترق المصير" },
+            en: { dir:"ltr", ht:"Digital Innovation Without Limits", cbtn:"Book a Consultation", login:"Author Login", vt:"Our Vision & Impact", stitle:"Our Expert Services", s1:"Content Creation", s2:"Growth & Ads", s3:"Medical Solutions", stt:"Digital Store", buy:"Buy Now", foot:"© 2026 Affican Digital. All rights reserved.", b1:"The Abyss", b2:"Millionaire", b3:"Path of Light", b4:"Truth Pulse", b5:"Mind Conflict", b6:"Idealism", b7:"Wisdom", b8:"Control", b9:"Mirror", b10:"Celebration", b11:"Collapse", b12:"Rupture", b13:"Revealed Look", b14:"Through Fire", b15:"Power Fall", b16:"Breaking Chains", b17:"Heart Stars", b18:"Fate Crossroads" }
         };
         function setLang(l, btn) {
             const d = trans[l];
             document.getElementById('html-tag').dir = d.dir;
             document.getElementById('h-t').textContent = d.ht;
+            document.getElementById('c-btn').textContent = d.cbtn;
             document.getElementById('v-t').textContent = d.vt;
             document.getElementById('login-txt').textContent = d.login;
             document.getElementById('s-title').textContent = d.stitle;
@@ -100,9 +141,10 @@
             document.getElementById('s2-t').textContent = d.s2;
             document.getElementById('s3-t').textContent = d.s3;
             document.getElementById('st-t').textContent = d.stt;
+            document.getElementById('foot-t').textContent = d.foot;
             for(let i=1; i<=18; i++) { 
                 let el = document.getElementById(`b${i}-t`);
-                if(el) el.textContent = d[`b${i}`] || el.textContent; 
+                if(el) el.textContent = d[`b${i}`]; 
             }
             document.querySelectorAll('.b-txt').forEach(el => el.textContent = d.buy);
             document.querySelectorAll('.l-btn').forEach(b => b.classList.remove('active'));
