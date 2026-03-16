@@ -10,25 +10,27 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background: var(--bg); color: var(--text); scroll-behavior: smooth; overflow-x: hidden; text-align: left; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
-        header { position: sticky; top: 0; z-index: 1000; background: rgba(3, 5, 9, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); padding: 10px 0; }
+        header { position: sticky; top: 0; z-index: 1000; background: rgba(3, 5, 9, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); padding: 12px 0; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
         .lang-switcher { display: flex; gap: 8px; }
         .l-btn { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; }
         .l-btn.active { background: var(--primary); border: none; }
         .login-btn { border: 1px solid var(--primary); color: var(--primary); padding: 6px 15px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 700; transition: 0.3s; }
-        .video-hero { width: 100%; max-width: 900px; margin: 30px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
+        .hero { padding: 40px 0; text-align: center; }
+        .video-hero { width: 100%; max-width: 900px; margin: 25px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(255,140,0,0.15); }
         video { width: 100%; display: block; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 0; }
-        .service-card { background: var(--card); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; transition: 0.4s; text-decoration: none; color: inherit; }
+        .service-card { background: var(--card); border-radius: 24px; border: 1px solid var(--border); overflow: hidden; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
         .service-card:hover { transform: translateY(-8px); border-color: var(--accent); }
+        .s-img { width: 100%; height: 220px; object-fit: cover; }
         .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; padding: 30px 0; }
-        .book-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; text-align: center; }
+        .book-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; text-align: center; transition: 0.3s; }
         .book-img { width: 100%; height: 260px; object-fit: cover; }
-        .price { color: var(--primary); font-weight: 900; margin: 8px 0; display: block; }
+        .price { color: var(--primary); font-weight: 900; margin: 8px 0; display: block; font-size: 1rem; }
         .buy-btn { background: var(--primary); color: #fff; padding: 8px; border-radius: 8px; text-decoration: none; display: block; font-weight: 900; font-size: 0.8rem; }
-        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); }
-        .social-links { display: flex; justify-content: center; gap: 20px; padding-bottom: 20px; }
-        .social-links a { color: var(--muted); text-decoration: none; font-weight: 700; }
+        .social-links { display: flex; justify-content: center; gap: 25px; padding: 40px 0; border-top: 1px solid var(--border); }
+        .social-links a { color: var(--muted); text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); }
         [dir="rtl"] { text-align: right; }
     </style>
 </head>
@@ -40,30 +42,37 @@
                 <button class="l-btn" onclick="setLang('ar')">AR</button>
                 <button class="l-btn" onclick="setLang('en')">EN</button>
             </div>
-            <img src="1772693837912.png" alt="Logo" style="height:40px;"> </div>
-        <a href="login.html" class="login-btn" id="login-txt">Accès Auteurs</a> </div></header>
+            <img src="1772693837912.png" alt="Logo" style="height:45px;"> </div>
+        <a href="login.html" class="login-btn" id="login-txt">Accès Auteurs</a>
+    </div></header>
 
     <section class="container" style="text-align:center; padding-top:40px;">
-        <h1 id="h-t">Innovation Numérique sans Limites</h1>
-        <div class="video-hero"><video controls><source src="intro.mp4" type="video/mp4"></video></div> </section>
-
-    <section class="container">
-        <div class="services-grid">
-            <a href="content.html" class="service-card"><img src="file_000000004ed4720cb619264a408d3cdc.png" style="width:100%; height:200px; object-fit:cover;"><div style="padding:15px;"><h3 id="s1-t">Création de Contenu</h3></div></a> <a href="ads.html" class="service-card"><img src="file_000000005d9c71fd97147d4aeb09530c.png" style="width:100%; height:200px; object-fit:cover;"><div style="padding:15px;"><h3 id="s2-t">Croissance & Ads</h3></div></a> <a href="management.html" class="service-card"><img src="1772696383756.png" style="width:100%; height:200px; object-fit:cover;"><div style="padding:15px;"><h3 id="s3-t">Solutions Médicales</h3></div></a> </div>
+        <h1 id="h-t" style="font-size: 2.2rem; font-weight: 900;">Innovation Numérique sans Limites</h1>
+        <div class="video-hero">
+            <video controls poster="1772693837912.png">
+                <source src="intro.mp4" type="video/mp4"> </video>
+        </div>
     </section>
 
     <section class="container">
-        <h2 style="color:var(--primary); text-align:center;" id="st-t">Boutique Numérique</h2>
-        <div style="text-align:center; margin: 20px 0;"><a href="register.html" class="login-btn" style="border-color:var(--accent); color:var(--accent);" id="add-txt">Vendre votre livre</a></div> <div class="books-grid">
-            <div class="book-card"><img src="11761.png" class="book-img"><div class="book-info"><h3>Millionaire Mindset</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="11771.png" class="book-img"><div class="book-info"><h3>L'Abîme</h3><span class="price">$35.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364167635.png" class="book-img"><div class="book-info"><h3>Chemin de Lumière</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364423078.png" class="book-img"><div class="book-info"><h3>Conflit des Esprits</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773344022401~2.jpg" class="book-img"><div class="book-info"><h3>Secrets du Cœur</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773344921541.png" class="book-img"><div class="book-info"><h3>Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364900688.png" class="book-img"><div class="book-info"><h3>Jeu Social</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="11770.png" class="book-img"><div class="book-info"><h3>Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364542485.png" class="book-img"><div class="book-info"><h3>Célébration</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="11767.png" class="book-img"><div class="book-info"><h3>Idéalisme</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364683540.png" class="book-img"><div class="book-info"><h3>Dernière Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773365091720.png" class="book-img"><div class="book-info"><h3>Avant Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="11772.png" class="book-img"><div class="book-info"><h3>Miroir de l'Ennemi</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> </div>
+        <h2 style="text-align:center; color:var(--accent); margin: 40px 0 20px;" id="s-t">Nos Services Marketing</h2>
+        <div class="services-grid">
+            <a href="content.html" class="service-card"><img src="file_000000004ed4720cb619264a408d3cdc.png" class="s-img"><div style="padding:20px;"><h3>Création de Contenu</h3></div></a> <a href="ads.html" class="service-card"><img src="file_000000005d9c71fd97147d4aeb09530c.png" class="s-img"><div style="padding:20px;"><h3>Croissance & Ads</h3></div></a> <a href="management.html" class="service-card"><img src="1772696383756.png" class="s-img"><div style="padding:20px;"><h3>Solutions Médicales</h3></div></a> </div>
+    </section>
+
+    <section class="container">
+        <h2 style="color:var(--primary); text-align:center; margin-bottom: 20px;" id="st-t">Boutique Numérique</h2>
+        <div style="text-align:center; margin-bottom:30px;"><a href="register.html" class="login-btn" style="border-color:var(--accent); color:var(--accent); padding: 10px 25px;" id="add-txt">Vendre votre livre</a></div>
+        <div class="books-grid">
+            <div class="book-card"><img src="abyss.png" class="book-img"><div class="book-info"><h3>L'Abîme</h3><span class="price">$35.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="millionaire.png" class="book-img"><div class="book-info"><h3>Millionaire Mindset</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364167635.png" class="book-img"><div class="book-info"><h3>Chemin de Lumière</h3><span class="price">$45.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364423078.png" class="book-img"><div class="book-info"><h3>Conflit des Esprits</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773567104359.png" class="book-img"><div class="book-info"><h3>Pouls de la Vérité</h3><span class="price">$30.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773344921541.png" class="book-img"><div class="book-info"><h3>Fils de Contrôle</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364900688.png" class="book-img"><div class="book-info"><h3>Jeu Social</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="wisdom.png" class="book-img"><div class="book-info"><h3>Sagesse</h3><span class="price">$25.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364542485.png" class="book-img"><div class="book-info"><h3>Célébration</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="idealism.png" class="book-img"><div class="book-info"><h3>Idéalisme</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773364683540.png" class="book-img"><div class="book-info"><h3>Dernière Rupture</h3><span class="price">$15.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="1773365091720.png" class="book-img"><div class="book-info"><h3>Avant Effondrement</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> <div class="book-card"><img src="enemy_mirror.png" class="book-img"><div class="book-info"><h3>Miroir de l'Ennemi</h3><span class="price">$10.00</span><a href="https://wa.me/213542961475" class="buy-btn b-txt">Acheter</a></div></div> </div>
     </section>
 
     <div class="social-links">
         <a href="#">TikTok</a><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Reddit</a>
     </div>
 
-    <footer style="padding:20px;">
-        <p>© 2026 Affican Digital Solutions. Partage limité à deux copies par achat.</p>
+    <footer style="padding:20px; font-size: 0.75rem; text-align: center; color: var(--muted);">
+        <p>© 2026 Affican Digital Solutions. Note: Partage strictement limité à deux copies par achat.</p>
     </footer>
 
     <script>
