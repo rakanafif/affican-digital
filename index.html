@@ -3,163 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
     <meta name="google-site-verification" content="mkq-KhrCe0g-YogPX614apmXV8QX1RCzn4gDTfRXRYM" />
     <meta name="google-site-verification" content="ISTTmgUKRQYc-Rd8a2pWmf-aBauQiLoEiOgYA6_pxWcs" />
     
-    <title id="pageTitle">Affican Digital | المنصة المتكاملة</title>
+    <title>Affican Digital | المنصة الشاملة</title>
     
     <style>
         :root { --gold: #ff9d00; --bg: #050505; --card: #111; --text: #fff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: 0.3s ease; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(0,0,0,0.9); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
-        .lang-switcher button { background: #1a1a1a; border: 1px solid #333; color: #fff; padding: 5px 12px; cursor: pointer; border-radius: 4px; font-size: 0.75rem; margin: 0 2px; }
-        .lang-switcher button.active { border-color: var(--gold); color: var(--gold); }
-        header.hero { padding: 80px 20px; text-align: center; background: radial-gradient(circle, #1a1a1a 0%, #000 100%); }
-        .hero img.logo { width: 160px; margin-bottom: 20px; filter: drop-shadow(0 0 10px var(--gold)); }
-        h1 { color: var(--gold); font-size: 2.2rem; margin-bottom: 15px; }
-        section { padding: 60px 5%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: var(--card); border: 1px solid #222; border-radius: 12px; padding: 20px; text-align: center; }
-        .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
-        .btn { display: inline-block; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; width: 100%; text-align: center; }
-        .btn-primary { background: var(--gold); color: #000; }
-        .registration { background: #0a0a0a; border-radius: 15px; padding: 30px; max-width: 500px; margin: 0 auto; border: 1px solid #222; }
-        input { width: 100%; padding: 12px; margin-bottom: 15px; background: #000; border: 1px solid #333; color: #fff; border-radius: 5px; }
-        footer { text-align: center; padding: 40px; border-top: 1px solid #222; font-size: 0.8rem; color: #666; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; transition: 0.3s; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+        
+        /* فيديو الخلفية */
+        .video-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.4; }
+
+        /* شريط التنقل */
+        nav { display: flex; justify-content: space-between; padding: 15px; background: rgba(0,0,0,0.8); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gold); }
+        .lang-btn { background: #222; border: 1px solid #444; color: #fff; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+
+        /* الواجهة الرئيسية */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 2.5rem; color: var(--gold); text-shadow: 0 0 20px #000; }
+        .btn { padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px; display: inline-block; }
+        .btn-gold { background: var(--gold); color: #000; }
+
+        /* قسم الخدمات والكتب */
+        section { padding: 50px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
+        .card { background: var(--card); border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; }
+        .card img { width: 100%; border-radius: 5px; margin-bottom: 10px; }
+
+        /* قسم المجتمع والتعليقات */
+        .community-box { background: #111; padding: 20px; border-radius: 15px; border-left: 4px solid var(--gold); margin-top: 30px; }
+        textarea { width: 100%; background: #000; border: 1px solid #333; color: #fff; padding: 10px; border-radius: 5px; margin-top: 10px; }
+
+        /* تحسين الهاتف */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr 1fr; } /* كتب بجانب بعضها في الهاتف */
+        }
     </style>
 </head>
 <body>
 
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="Intro.mp4" type="video/mp4">
+    </video>
+
     <nav>
         <div class="lang-switcher">
-            <button onclick="changeLang('ar')" id="btnAr" class="active">العربية</button>
-            <button onclick="changeLang('en')" id="btnEn">EN</button>
-            <button onclick="changeLang('fr')" id="btnFr">FR</button>
+            <button class="lang-btn" onclick="changeLang('ar')">AR</button>
+            <button class="lang-btn" onclick="changeLang('en')">EN</button>
+            <button class="lang-btn" onclick="changeLang('fr')">FR</button>
         </div>
-        <div style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">AFFICAN DIGITAL</div>
+        <div style="color: var(--gold); font-weight: bold;">AFFICAN DIGITAL</div>
     </nav>
 
-    <header class="hero">
-        <img src="logo.png" alt="Logo" class="logo">
+    <section class="hero">
         <h1 id="heroTitle">Affican Digital Solutions</h1>
-        <p id="heroDesc" class="lead" style="max-width: 600px; margin: 0 auto 30px; color: #ccc;">رصد التحولات المادية وتثبيت الأثر الرقمي. نحن نحول الرؤى الفلسفية إلى واقع ملموس.</p>
-        <div style="max-width: 250px; margin: 0 auto;">
-            <a href="#store" id="btnExplore" class="btn btn-primary">دخول المتجر</a>
+        <p id="heroDesc">رصد التحولات المادية وتثبيت الأثر الرقمي.</p>
+        <div class="btn-group">
+            <a href="#store" class="btn btn-gold" id="btnStore">متجر الكتب</a>
+            <a href="#services" class="btn btn-gold" id="btnServ">خدماتنا</a>
         </div>
-    </header>
+    </section>
+
+    <section id="services">
+        <h2 style="color: var(--gold); text-align: center; margin-bottom: 20px;" id="servTitle">الخدمات الرقمية</h2>
+        <div class="grid">
+            <div class="card"><h3>رصد الكيان</h3><a href="#" class="btn-gold" style="padding:5px; font-size:0.7rem; border-radius:3px;">دخول</a></div>
+            <div class="card"><h3>التسويق</h3><a href="#" class="btn-gold" style="padding:5px; font-size:0.7rem; border-radius:3px;">دخول</a></div>
+            <div class="card"><h3>البرمجة</h3><a href="#" class="btn-gold" style="padding:5px; font-size:0.7rem; border-radius:3px;">دخول</a></div>
+        </div>
+    </section>
 
     <section id="store">
-        <h2 id="storeTitle" style="text-align: center; color: var(--gold); margin-bottom: 40px;">إصداراتنا الرقمية</h2>
+        <h2 style="color: var(--gold); text-align: center; margin-bottom: 20px;">مكتبة راكان عفيف</h2>
         <div class="grid">
-            <div class="card">
-                <img src="abyss.png" alt="Abyss">
-                <h3 id="book1Title">رواية الهاوية</h3>
-                <p id="book1Desc" style="font-size: 0.85rem; color: #888; margin: 10px 0;">رحلة في أعماق النفس البشرية.</p>
-                <a href="#" class="btn btn-primary buyBtn">شراء الآن</a>
-            </div>
-            <div class="card">
-                <img src="millionaire.png" alt="Millionaire">
-                <h3 id="book2Title">عقلية المليونير</h3>
-                <p id="book2Desc" style="font-size: 0.85rem; color: #888; margin: 10px 0;">استراتيجيات التحول المادي والمالي.</p>
-                <a href="#" class="btn btn-primary buyBtn">شراء الآن</a>
-            </div>
+            <div class="card"><img src="abyss.png"><h4>الهاوية</h4><button class="btn-gold" style="width:100%; border:none; padding:5px;">شراء</button></div>
+            <div class="card"><img src="millionaire.png"><h4>المليونير</h4><button class="btn-gold" style="width:100%; border:none; padding:5px;">شراء</button></div>
+            <div class="card"><img src="truth.png"><h4>نبض الحقيقة</h4><button class="btn-gold" style="width:100%; border:none; padding:5px;">شراء</button></div>
         </div>
     </section>
 
     <section id="community">
-        <div class="registration">
-            <h2 id="regTitle" style="color: var(--gold); text-align: center; margin-bottom: 20px;">بوابة الشركاء</h2>
-            <form>
-                <input type="text" id="inputName" placeholder="الاسم الكامل">
-                <input type="email" id="inputEmail" placeholder="البريد الإلكتروني">
-                <button type="submit" id="btnSubmit" class="btn btn-primary">إرسال الطلب</button>
-            </form>
+        <h2 style="color: var(--gold); text-align: center;">مجتمع Affican</h2>
+        <div class="community-box">
+            <p>شاركنا رؤيتك أو انشر فيديو/صورة من أعمالك:</p>
+            <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+            <button class="btn-gold" style="margin-top:10px; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">نشر في المجتمع</button>
         </div>
     </section>
 
-    <footer>
-        <p id="footerText">&copy; 2026 Affican Digital. جميع الحقوق محفوظة لراكان عفيف.</p>
+    <footer style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.8rem;">
+        &copy; 2026 Affican Digital | All Rights Reserved
     </footer>
 
     <script>
-        const translations = {
-            ar: {
-                dir: "rtl",
-                heroTitle: "Affican Digital Solutions",
-                heroDesc: "رصد التحولات المادية وتثبيت الأثر الرقمي. نحن نحول الرؤى الفلسفية إلى واقع ملموس.",
-                btnExplore: "دخول المتجر",
-                storeTitle: "إصداراتنا الرقمية",
-                book1Title: "رواية الهاوية",
-                book1Desc: "رحلة في أعماق النفس البشرية.",
-                book2Title: "عقلية المليونير",
-                book2Desc: "استراتيجيات التحول المادي والمالي.",
-                regTitle: "بوابة الشركاء",
-                inputName: "الاسم الكامل",
-                inputEmail: "البريد الإلكتروني",
-                btnSubmit: "إرسال الطلب",
-                buyBtn: "شراء الآن",
-                footerText: "© 2026 Affican Digital. جميع الحقوق محفوظة لراكان عفيف."
-            },
-            en: {
-                dir: "ltr",
-                heroTitle: "Affican Digital Solutions",
-                heroDesc: "Monitoring physical transformations and establishing digital impact. We turn philosophical visions into reality.",
-                btnExplore: "Enter Store",
-                storeTitle: "Digital Publications",
-                book1Title: "The Abyss Novel",
-                book1Desc: "A journey into the depths of the human soul.",
-                book2Title: "Millionaire Mindset",
-                book2Desc: "Strategies for physical and financial transformation.",
-                regTitle: "Partners Portal",
-                inputName: "Full Name",
-                inputEmail: "Email Address",
-                btnSubmit: "Submit Request",
-                buyBtn: "Buy Now",
-                footerText: "© 2026 Affican Digital. All rights reserved to Rakan Afif."
-            },
-            fr: {
-                dir: "ltr",
-                heroTitle: "Affican Digital Solutions",
-                heroDesc: "Suivi des transformations physiques et établissement de l'impact numérique. Nous transformons les visions philosophiques en réalité.",
-                btnExplore: "Entrer dans la boutique",
-                storeTitle: "Publications Numériques",
-                book1Title: "Le Roman de l'Abîme",
-                book1Desc: "Un voyage dans les profondeurs de l'âme humaine.",
-                book2Title: "L'esprit Millionnaire",
-                book2Desc: "Stratégies de transformation physique et financière.",
-                regTitle: "Portail des Partenaires",
-                inputName: "Nom Complet",
-                inputEmail: "Adresse E-mail",
-                btnSubmit: "Envoyer la Demande",
-                buyBtn: "Acheter Maintenant",
-                footerText: "© 2026 Affican Digital. Tous droits réservés à Rakan Afif."
-            }
-        };
-
-        function changeLang(lang) {
-            const data = translations[lang];
-            document.getElementById('mainHtml').dir = data.dir;
-            document.getElementById('mainHtml').lang = lang;
-            document.getElementById('heroTitle').innerText = data.heroTitle;
-            document.getElementById('heroDesc').innerText = data.heroDesc;
-            document.getElementById('btnExplore').innerText = data.btnExplore;
-            document.getElementById('storeTitle').innerText = data.storeTitle;
-            document.getElementById('book1Title').innerText = data.book1Title;
-            document.getElementById('book1Desc').innerText = data.book1Desc;
-            document.getElementById('book2Title').innerText = data.book2Title;
-            document.getElementById('book2Desc').innerText = data.book2Desc;
-            document.getElementById('regTitle').innerText = data.regTitle;
-            document.getElementById('inputName').placeholder = data.inputName;
-            document.getElementById('inputEmail').placeholder = data.inputEmail;
-            document.getElementById('btnSubmit').innerText = data.btnSubmit;
-            document.getElementById('footerText').innerText = data.footerText;
-            
-            document.querySelectorAll('.buyBtn').forEach(btn => btn.innerText = data.buyBtn);
-            
-            document.querySelectorAll('.lang-switcher button').forEach(b => b.classList.remove('active'));
-            document.getElementById('btn' + lang.charAt(0).toUpperCase() + lang.slice(1)).classList.add('active');
+        function changeLang(l) {
+            const t = {
+                ar: {h: "Affican Digital Solutions", s: "متجر الكتب", v: "خدماتنا"},
+                en: {h: "Affican Digital Solutions", s: "Book Store", v: "Our Services"},
+                fr: {h: "Affican Digital Solutions", s: "Boutique", v: "Services"}
+            };
+            document.getElementById('heroTitle').innerText = t[l].h;
+            document.getElementById('btnStore').innerText = t[l].s;
+            document.getElementById('btnServ').innerText = t[l].v;
+            document.getElementById('mainHtml').dir = (l === 'ar' ? 'rtl' : 'ltr');
         }
     </script>
 </body>
