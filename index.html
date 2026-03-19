@@ -7,49 +7,49 @@
     <meta name="google-site-verification" content="mkq-KhrCe0g-YogPX614apmXV8QX1RCzn4gDTfRXRYM" />
     <meta name="google-site-verification" content="ISTTmgUKRQYc-Rd8a2pWmf-aBauQiLoEiOgYA6_pxWcs" />
     
-    <title id="pageTitle">Affican Digital | المنصة المتكاملة</title>
+    <title>Affican Digital | المنصة الرسمية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --gold: #ff9d00; --bg: #050505; --card: #111; --text: #fff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; transition: 0.3s; }
+        :root { --gold: #ff9d00; --bg: #000; --card: #111; --text: #fff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
         body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
 
-        /* فيديو الخلفية السينمائي */
-        .video-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+        /* فيديو الخلفية */
+        .video-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: #000; }
         .video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: -1; }
 
-        /* شريط التنقل واللغات */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(0,0,0,0.8); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); backdrop-filter: blur(5px); }
-        .lang-switcher button { background: #222; border: 1px solid #444; color: #fff; padding: 5px 12px; cursor: pointer; border-radius: 4px; font-size: 0.7rem; }
-        .lang-switcher button.active { border-color: var(--gold); color: var(--gold); }
+        /* نافبار الهاتف */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(0,0,0,0.9); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
+        .lang-btn { background: #222; color: #fff; border: 1px solid #444; padding: 5px 8px; border-radius: 4px; font-size: 0.7rem; cursor: pointer; }
 
-        /* الواجهة الرئيسية */
+        /* الهيرو */
         .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 2.8rem; color: var(--gold); text-shadow: 0 0 20px #000; margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 30px; color: #eee; }
+        .hero h1 { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; }
+        .hero p { font-size: 1rem; max-width: 500px; color: #ccc; margin-bottom: 30px; }
 
-        /* قسم الخدمات */
-        section { padding: 60px 5%; background: rgba(5,5,5,0.9); }
-        .section-title { text-align: center; color: var(--gold); margin-bottom: 40px; font-size: 1.8rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
-        .card { background: var(--card); border: 1px solid #333; border-radius: 12px; padding: 20px; text-align: center; }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        /* الأقسام والشبكة */
+        section { padding: 60px 20px; text-align: center; }
+        .section-title { color: var(--gold); font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+        .card { background: var(--card); border: 1px solid #222; border-radius: 10px; padding: 15px; transition: 0.3s; }
+        .card img { width: 100%; border-radius: 5px; margin-bottom: 10px; }
+        .card h3 { font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* الأزرار */
-        .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; text-align: center; font-size: 0.9rem; }
-        .btn-gold { background: var(--gold); color: #000; width: 100%; }
-        .btn-outline { border: 1px solid var(--gold); color: var(--gold); background: none; }
+        /* أزرار الخدمات */
+        .btn { display: block; padding: 12px; background: var(--gold); color: #000; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.8rem; }
+        
+        /* المجتمع والتواصل */
+        .form-box { background: #0a0a0a; padding: 30px; border-radius: 15px; border: 1px solid #333; max-width: 500px; margin: 0 auto; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: #000; border: 1px solid #333; color: #fff; border-radius: 5px; }
+        
+        .social-links { display: flex; justify-content: center; gap: 20px; margin: 30px 0; font-size: 1.5rem; }
+        .social-links a { color: var(--gold); transition: 0.3s; }
 
-        /* قسم المجتمع والتعليقات */
-        .community-box { background: #0a0a0a; border: 1px solid #222; padding: 30px; border-radius: 15px; max-width: 600px; margin: 0 auto; }
-        textarea { width: 100%; background: #000; border: 1px solid #333; color: #fff; padding: 15px; border-radius: 8px; margin: 15px 0; min-height: 100px; }
-
-        /* تحسين الهاتف */
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.8rem; }
-            .grid { grid-template-columns: 1fr 1fr; gap: 10px; } /* الكتب بجانب بعضها في الهاتف */
-            .hero { height: auto; padding: 100px 20px; }
+            .grid { grid-template-columns: 1fr 1fr; } /* كتب بجانب بعضها للهاتف */
         }
     </style>
 </head>
@@ -59,95 +59,78 @@
         <video class="video-bg" autoplay muted loop playsinline>
             <source src="Intro.mp4" type="video/mp4">
         </video>
+        <div class="overlay"></div>
     </div>
 
     <nav>
         <div class="lang-switcher">
-            <button onclick="changeLang('ar')" id="btnAr" class="active">العربية</button>
-            <button onclick="changeLang('en')" id="btnEn">EN</button>
-            <button onclick="changeLang('fr')" id="btnFr">FR</button>
+            <button class="lang-btn" onclick="changeLang('ar')">AR</button>
+            <button class="lang-btn" onclick="changeLang('en')">EN</button>
+            <button class="lang-btn" onclick="changeLang('fr')">FR</button>
         </div>
-        <div style="color: var(--gold); font-weight: bold; font-size: 0.8rem;">AFFICAN DIGITAL</div>
+        <div style="color: var(--gold); font-weight: bold;">AFFICAN DIGITAL</div>
     </nav>
 
     <header class="hero">
-        <img src="logo.png" style="width: 140px; margin-bottom: 20px;" alt="Logo">
-        <h1 id="heroH1">Affican Digital Solutions</h1>
-        <p id="heroP">رصد التحولات المادية وتثبيت الأثر الرقمي. نحن نحول الركود المادي إلى سيولة رقمية.</p>
+        <h1 id="hTitle">Affican Digital Solutions</h1>
+        <p id="hDesc">رصد الكيان الرقمي وتسويق المحتوى. حول رؤيتك إلى واقع ملموس.</p>
         <div style="display: flex; gap: 10px;">
-            <a href="#store" class="btn btn-gold" id="btnStoreNav">المتجر</a>
-            <a href="#services" class="btn btn-outline" id="btnServNav">الخدمات</a>
+            <a href="#books" class="btn" id="btnB">المكتبة</a>
+            <a href="#services" class="btn" style="background: none; color: var(--gold); border: 1px solid var(--gold);" id="btnS">الخدمات</a>
         </div>
     </header>
 
     <section id="services">
-        <h2 class="section-title" id="titleServ">الخدمات الرقمية</h2>
+        <h2 class="section-title">خدماتنا الرقمية</h2>
         <div class="grid">
-            <div class="card"><h3>رصد الكيان</h3><a href="#" class="btn btn-gold" style="padding:5px; margin-top:10px;">دخول</a></div>
-            <div class="card"><h3>التسويق</h3><a href="#" class="btn btn-gold" style="padding:5px; margin-top:10px;">دخول</a></div>
-            <div class="card"><h3>البرمجة</h3><a href="#" class="btn btn-gold" style="padding:5px; margin-top:10px;">دخول</a></div>
+            <div class="card"><i class="fas fa-eye" style="font-size: 2rem; color: var(--gold);"></i><h3>رصد الكيان</h3><a href="#" class="btn">دخول</a></div>
+            <div class="card"><i class="fas fa-bullhorn" style="font-size: 2rem; color: var(--gold);"></i><h3>التسويق</h3><a href="#" class="btn">دخول</a></div>
+            <div class="card"><i class="fas fa-code" style="font-size: 2rem; color: var(--gold);"></i><h3>البرمجة</h3><a href="#" class="btn">دخول</a></div>
         </div>
     </section>
 
-    <section id="store">
-        <h2 class="section-title" id="titleStore">مكتبة راكان عفيف</h2>
+    <section id="books">
+        <h2 class="section-title">متجر الكتب</h2>
         <div class="grid">
-            <div class="card"><img src="abyss.png"><h4>رواية الهاوية</h4><a href="#" class="btn btn-gold buyBtn">شراء</a></div>
-            <div class="card"><img src="millionaire.png"><h4>عقلية المليونير</h4><a href="#" class="btn btn-gold buyBtn">شراء</a></div>
-            <div class="card"><img src="truth.png"><h4>نبض الحقيقة</h4><a href="#" class="btn btn-gold buyBtn">شراء</a></div>
+            <div class="card"><img src="abyss.png"><h3>الهاوية</h3><a href="#" class="btn">شراء</a></div>
+            <div class="card"><img src="millionaire.png"><h3>المليونير</h3><a href="#" class="btn">شراء</a></div>
+            <div class="card"><img src="truth.png"><h3>نبض الحقيقة</h3><a href="#" class="btn">شراء</a></div>
+            <div class="card"><img src="logo.png"><h3>رصد المادة</h3><a href="#" class="btn">شراء</a></div>
         </div>
     </section>
 
-    <section id="community">
-        <h2 class="section-title" id="titleComm">المجتمع والنبض</h2>
-        <div class="community-box">
-            <p id="commDesc">شاركنا فيديو، صورة، أو تعليقك حول رحلتك الرقمية:</p>
-            <textarea id="textComm" placeholder="اكتب تعليقك هنا..."></textarea>
-            <button class="btn btn-gold" id="btnPost">نشر في المجتمع</button>
+    <section id="register">
+        <div class="form-box">
+            <h2 id="regT" style="color: var(--gold); margin-bottom: 20px;">انضم للمجتمع</h2>
+            <input type="text" placeholder="الاسم الكامل">
+            <input type="email" placeholder="البريد الإلكتروني">
+            <textarea placeholder="اكتب اقتباسك أو تعليقك هنا..."></textarea>
+            <button class="btn" style="width: 100%; border: none;">إرسال والاشتراك</button>
         </div>
     </section>
 
-    <section id="sellers">
-        <h2 class="section-title" id="titleSellers">بوابة البائعين</h2>
-        <div class="community-box">
-            <input type="text" id="inName" placeholder="الاسم الكامل">
-            <input type="email" id="inEmail" placeholder="البريد الإلكتروني">
-            <button class="btn btn-gold" id="btnReg">تسجيل كبائع</button>
-        </div>
-    </section>
+    <div class="social-links">
+        <a href="https://www.tiktok.com/@affican"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/affican"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/affican"><i class="fab fa-instagram"></i></a>
+    </div>
 
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid #222; font-size: 0.8rem;">
-        <p id="foot">© 2026 Affican Digital. جميع الحقوق محفوظة لراكان عفيف.</p>
+    <footer>
+        <p style="text-align: center; padding: 20px; font-size: 0.8rem; color: #555;">&copy; 2026 Affican Digital. جميع الحقوق محفوظة لراكان عفيف.</p>
     </footer>
 
     <script>
-        const trans = {
-            ar: { dir: "rtl", h1: "Affican Digital Solutions", p: "رصد التحولات المادية وتثبيت الأثر الرقمي.", s: "المتجر", v: "الخدمات", ts: "الخدمات الرقمية", tst: "مكتبة راكان عفيف", tc: "المجتمع والنبض", cd: "شاركنا رؤيتك في المجتمع", cp: "اكتب هنا...", bp: "نشر", tsell: "بوابة البائعين", in: "الاسم الكامل", ie: "البريد الإلكتروني", br: "تسجيل كبائع", buy: "شراء", f: "© 2026 Affican Digital. جميع الحقوق محفوظة لراكان عفيف." },
-            en: { dir: "ltr", h1: "Affican Digital Solutions", p: "Monitoring physical transformations and establishing digital impact.", s: "Store", v: "Services", ts: "Digital Services", tst: "Rakan Afif Library", tc: "Community & Pulse", cd: "Share your vision with us", cp: "Write here...", bp: "Post", tsell: "Sellers Portal", in: "Full Name", ie: "Email", br: "Register as Seller", buy: "Buy", f: "© 2026 Affican Digital. All rights reserved." },
-            fr: { dir: "ltr", h1: "Affican Digital Solutions", p: "Suivi des transformations physiques et impact numérique.", s: "Boutique", v: "Services", ts: "Services Numériques", tst: "Bibliothèque Rakan Afif", tc: "Communauté & Pouls", cd: "Partagez votre vision", cp: "Écrivez ici...", bp: "Publier", tsell: "Portail Vendeurs", in: "Nom Complet", ie: "Email", br: "S'inscrire", buy: "Acheter", f: "© 2026 Affican Digital. Tous droits réservés." }
-        };
-
         function changeLang(l) {
-            const d = trans[l];
-            document.getElementById('mainHtml').dir = d.dir;
-            document.getElementById('heroH1').innerText = d.h1;
-            document.getElementById('heroP').innerText = d.p;
-            document.getElementById('btnStoreNav').innerText = d.s;
-            document.getElementById('btnServNav').innerText = d.v;
-            document.getElementById('titleServ').innerText = d.ts;
-            document.getElementById('titleStore').innerText = d.tst;
-            document.getElementById('titleComm').innerText = d.tc;
-            document.getElementById('commDesc').innerText = d.cd;
-            document.getElementById('textComm').placeholder = d.cp;
-            document.getElementById('btnPost').innerText = d.bp;
-            document.getElementById('titleSellers').innerText = d.tsell;
-            document.getElementById('inName').placeholder = d.in;
-            document.getElementById('inEmail').placeholder = d.ie;
-            document.getElementById('btnReg').innerText = d.br;
-            document.getElementById('foot').innerText = d.f;
-            document.querySelectorAll('.buyBtn').forEach(b => b.innerText = d.buy);
-            document.querySelectorAll('.lang-switcher button').forEach(b => b.classList.remove('active'));
-            document.getElementById('btn' + l.charAt(0).toUpperCase() + l.slice(1)).classList.add('active');
+            const t = {
+                ar: {h: "Affican Digital Solutions", d: "رصد الكيان الرقمي وتسويق المحتوى.", b: "المكتبة", s: "الخدمات", dir: "rtl"},
+                en: {h: "Affican Digital Solutions", d: "Digital entity monitoring and content marketing.", b: "Library", s: "Services", dir: "ltr"},
+                fr: {h: "Affican Digital Solutions", d: "Suivi de l'entité numérique et marketing de contenu.", b: "Boutique", s: "Services", dir: "ltr"}
+            };
+            document.getElementById('hTitle').innerText = t[l].h;
+            document.getElementById('hDesc').innerText = t[l].d;
+            document.getElementById('btnB').innerText = t[l].b;
+            document.getElementById('btnS').innerText = t[l].s;
+            document.getElementById('mainHtml').dir = t[l].dir;
         }
     </script>
 </body>
